@@ -1,0 +1,29 @@
+# ps-003: Healthcare Capacity Optimisation
+
+problem_statement: "ps-003-healthcare-capacity"
+description: "Optimise healthcare facility capacity allocation based on demand forecasts"
+
+data:
+  interim: "problem-statements/ps-003-healthcare-capacity/data/3_interim"
+  processed: "problem-statements/ps-003-healthcare-capacity/data/4_processed"
+  sources:
+    - "shared/data/1_raw/capacity/"
+    - "shared/data/2_external/"
+
+analysis:
+  start_year: 2012
+  forecast_horizon_years: 5
+  confidence_interval: 0.95
+
+models:
+  output_dir: "problem-statements/ps-003-healthcare-capacity/models"
+  evaluation_metric: "rmse"
+
+results:
+  tables: "problem-statements/ps-003-healthcare-capacity/results/tables"
+  metrics: "problem-statements/ps-003-healthcare-capacity/results/metrics"
+  exports: "problem-statements/ps-003-healthcare-capacity/results/exports"
+
+reports:
+  figures: "problem-statements/ps-003-healthcare-capacity/reports/figures"
+  dashboards: "problem-statements/ps-003-healthcare-capacity/reports/dashboards"

@@ -1,0 +1,33 @@
+# Databricks / HEALIX platform configuration
+
+platform:
+  name: "HEALIX"
+  provider: "Databricks"
+  runtime: "13.3.x LTS (Python 3.11)"
+  region: "Southeast Asia"
+
+cluster:
+  node_type: "Standard_DS3_v2"
+  min_workers: 1
+  max_workers: 4
+  autoscale: true
+  spark_version: "13.3.x-scala2.12"
+
+spark:
+  conf:
+    "spark.sql.adaptive.enabled": "true"
+    "spark.sql.adaptive.coalescePartitions.enabled": "true"
+    "spark.databricks.delta.preview.enabled": "true"
+
+# Workspace paths
+paths:
+  workspace: "/Workspace/Users/moh-analytics"
+  dbfs: "/dbfs/mnt/moh-data"
+  raw: "/dbfs/mnt/moh-data/1_raw"
+  processed: "/dbfs/mnt/moh-data/4_processed"
+
+# Job scheduling
+jobs:
+  default_timeout_minutes: 60
+  max_retries: 2
+  retry_delay_seconds: 30

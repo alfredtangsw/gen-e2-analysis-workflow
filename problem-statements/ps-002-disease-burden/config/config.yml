@@ -1,0 +1,33 @@
+# ps-002: Disease Burden Temporal Trends
+
+problem_statement: "ps-002-disease-burden"
+description: "Analyse temporal trends in disease burden and predict future disease prevalence in Singapore"
+
+data:
+  interim: "problem-statements/ps-002-disease-burden/data/3_interim"
+  processed: "problem-statements/ps-002-disease-burden/data/4_processed"
+  sources:
+    - "shared/data/1_raw/disease_surveillance/"
+    - "shared/data/2_external/"
+
+analysis:
+  start_year: 2012
+  forecast_horizon_years: 5
+  confidence_interval: 0.95
+  disease_categories:
+    - "communicable"
+    - "non-communicable"
+    - "mental-health"
+
+models:
+  output_dir: "problem-statements/ps-002-disease-burden/models"
+  evaluation_metric: "mape"
+
+results:
+  tables: "problem-statements/ps-002-disease-burden/results/tables"
+  metrics: "problem-statements/ps-002-disease-burden/results/metrics"
+  exports: "problem-statements/ps-002-disease-burden/results/exports"
+
+reports:
+  figures: "problem-statements/ps-002-disease-burden/reports/figures"
+  dashboards: "problem-statements/ps-002-disease-burden/reports/dashboards"

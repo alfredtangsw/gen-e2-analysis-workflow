@@ -52,4 +52,12 @@ This epic decomposes the healthcare capacity optimization analysis into 10 sprin
 
 ---
 
-**Last Updated**: March 11, 2026
+## Domain Knowledge References
+
+- [Healthcare Capacity & Utilization Metrics KPIs](../../../../domain-knowledge/healthcare-capacity-utilization-metrics-kpis.md) — Bed occupancy rate, bed-population ratio, utilisation efficiency metrics
+- [Healthcare Workforce Metrics & KPIs](../../../../domain-knowledge/healthcare-workforce-metrics-kpis.md) — Staffing constraints on capacity
+- [Time Series Forecasting Methods](../../../../domain-knowledge/time-series-forecasting-methods.md) — Capacity demand projection methodology
+
+---
+
+**Last Updated**: 2026-04-08

@@ -198,12 +198,15 @@ gen-e2/
 ## 🎯 Project Phases & Roadmap
 
 ### Phase 0: Setup ✅ **COMPLETED**
-- [x] Environment configuration (Python 3.9, uv package manager)
-- [x] Virtual environment creation and activation
-- [x] Dependencies installation (Polars, Databricks, testing frameworks)
-- [x] Folder structure creation (hybrid shared + problem-statements)
-- [x] Documentation setup (README, docs/index, data dictionary)
-- [x] Configuration files (base.yml, databricks.yml, .env.example)
+- [x] Environment configuration (Python 3.11, uv 0.11.4, HEALIX/Databricks target)
+- [x] Virtual environment created at `.venv` via `uv venv .venv --python 3.11`
+- [x] `requirements.txt` with Polars, loguru, Kaggle, statsmodels, scikit-learn, pytest, ruff
+- [x] Hybrid folder structure: `shared/` + `problem-statements/ps-{001,002,003}/`
+- [x] Shared library stubs: `shared/src/{utils,data_processing,analysis,models,visualization,orchestration}/`
+- [x] Configuration files: `shared/config/base.yml`, `shared/config/databricks.yml`, `.env.example`
+- [x] Kaggle extractor script: `shared/src/data_processing/kaggle_extractor.py`
+- [x] Data validation utilities: `shared/src/data_processing/validation.py`
+- [x] Problem-level config files: `config/config.yml` for each of ps-001, ps-002, ps-003
 
 ### Phase 1: Data Acquisition 🚧 **NEXT**
 - [ ] Identify Singapore health datasets on Kaggle and other sources

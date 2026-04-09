@@ -1,0 +1,32 @@
+# Base configuration for Singapore Healthcare Analysis
+
+project:
+  name: "gen-e2-healthcare-analysis"
+  description: "Singapore Healthcare Resource Management Analysis"
+  version: "0.1.0"
+  environment: "${PROJECT_ENV:-development}"
+
+# Data paths (relative to project root)
+data:
+  raw: "shared/data/1_raw"
+  external: "shared/data/2_external"
+  schemas: "shared/data/schemas"
+
+# Logging
+logging:
+  level: "${LOG_LEVEL:-INFO}"
+  format: "{time:YYYY-MM-DD HH:mm:ss} | {level} | {name}:{line} | {message}"
+  etl_log: "logs/etl"
+  error_log: "logs/errors"
+  audit_log: "logs/audit"
+
+# Analysis defaults
+analysis:
+  random_seed: 42
+  date_format: "%Y-%m-%d"
+  locale: "sg"  # Singapore locale
+
+# Polars settings
+polars:
+  streaming_chunk_size: 100_000
+  lazy_eval: true

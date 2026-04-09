@@ -1,0 +1,28 @@
+# ps-001: Healthcare Workforce Sustainability
+
+problem_statement: "ps-001-healthcare-workforce"
+description: "Analyse and forecast healthcare workforce supply and demand in Singapore"
+
+data:
+  interim: "problem-statements/ps-001-healthcare-workforce/data/3_interim"
+  processed: "problem-statements/ps-001-healthcare-workforce/data/4_processed"
+  sources:
+    - "shared/data/1_raw/workforce/"
+
+analysis:
+  start_year: 2012
+  forecast_horizon_years: 10
+  confidence_interval: 0.95
+
+models:
+  output_dir: "problem-statements/ps-001-healthcare-workforce/models"
+  evaluation_metric: "mape"
+
+results:
+  tables: "problem-statements/ps-001-healthcare-workforce/results/tables"
+  metrics: "problem-statements/ps-001-healthcare-workforce/results/metrics"
+  exports: "problem-statements/ps-001-healthcare-workforce/results/exports"
+
+reports:
+  figures: "problem-statements/ps-001-healthcare-workforce/reports/figures"
+  dashboards: "problem-statements/ps-001-healthcare-workforce/reports/dashboards"

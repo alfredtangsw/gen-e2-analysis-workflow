@@ -3,7 +3,7 @@
 **Epic**: Healthcare Expenditure Drivers & Cost Control Analysis  
 **Problem Statement**: [ps-004-healthcare-expenditure-drivers.md](../../problem_statements/ps-004-healthcare-expenditure-drivers.md)  
 **Analysis Category**: Diagnostic Analytics  
-**Priority**: P1 (High)
+**Priority**: P0 (Critical)
 
 ---
 
@@ -51,4 +51,12 @@ This epic decomposes the expenditure driver analysis into 9 sprint-ready user st
 
 ---
 
-**Last Updated**: March 11, 2026
+## Domain Knowledge References
+
+- [Healthcare Expenditure Analysis Guide](../../../../domain-knowledge/healthcare-expenditure-analysis-guide.md) — Decomposition methods, CAGR calculation, international benchmarking context
+- [Healthcare Capacity & Utilization Metrics](../../../../domain-knowledge/healthcare-capacity-utilization-metrics-kpis.md) — Utilisation as a volume driver of expenditure
+- [Time Series Forecasting Methods](../../../../domain-knowledge/time-series-forecasting-methods.md) — Expenditure projection methodology
+
+---
+
+**Last Updated**: 2026-04-08

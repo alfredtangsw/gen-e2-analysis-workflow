@@ -1,14 +1,124 @@
 # User Story Generation: Completion Summary
 
 **Generated**: March 11, 2026  
-**Task**: Generate comprehensive user stories for 5 healthcare analytics problem statements  
-**Status**: ✅ **COMPLETED**
+**Updated**: 2026-04-08  
+**Task**: Generate comprehensive user stories for 6 healthcare analytics problem statements  
+**Status**: ✅ **COMPLETED — All 57 stories across 6 problem statements fully detailed**
 
 ---
 
 ## Executive Summary
 
-Successfully generated **47 user stories** across **5 problem statements** following INVEST principles and the Data Analysis Lifecycle framework. All stories include complete templates with acceptance criteria, domain knowledge references, implementation tasks, and technical constraints.
+**57 user stories** exist across **6 problem statements** following INVEST principles and the Data Analysis Lifecycle framework. All story files include complete templates with acceptance criteria, domain knowledge references, implementation tasks, and technical constraints. PS-006 (Disease Burden Forecasting) was added after the initial generation run.
+
+**April 2026 updates**:
+- PS-004 priority corrected to P0 (Critical) — was incorrectly listed as P1
+- PS-005 priority confirmed P2 (Medium) due to SES/ethnicity data constraints
+- 3 new domain knowledge files created: capacity/utilisation metrics, expenditure analysis, health equity metrics
+- Domain knowledge references added to PS-003, PS-004, PS-005 index files
+
+---
+
+## Deliverables Created
+
+### Index Files (7 files)
+✅ **All problem statement index files created**
+
+1. [docs/objectives/user_stories/README.md](README.md) — Master index
+2. [problem-statement-001-workforce/index.md](problem-statement-001-workforce/index.md) — PS-001 Workforce (10 stories)
+3. [problem-statement-002-disease-burden/index.md](problem-statement-002-disease-burden/index.md) — PS-002 Disease Burden (9 stories)
+4. [problem-statement-003-capacity/index.md](problem-statement-003-capacity/index.md) — PS-003 Capacity (10 stories)
+5. [problem-statement-004-expenditure/index.md](problem-statement-004-expenditure/index.md) — PS-004 Expenditure (9 stories) — P0 Critical
+6. [problem-statement-005-equity/index.md](problem-statement-005-equity/index.md) — PS-005 Equity (9 stories) — P2 Medium
+7. [problem-statement-006-forecasting/index.md](problem-statement-006-forecasting/index.md) — PS-006 Forecasting (10 stories)
+
+### Domain Knowledge Files (6 files)
+
+| File | Domain | Problem Statements |
+|------|--------|-------------------|
+| `healthcare-workforce-metrics-kpis.md` | Workforce density, forecasting | PS-001 |
+| `disease-burden-feature-engineering-guide.md` | ASMR, DALY, APC | PS-002, PS-006 |
+| `time-series-forecasting-methods.md` | ARIMA, Prophet, backtesting | PS-001, PS-006 |
+| `healthcare-capacity-utilization-metrics-kpis.md` *(new)* | BOR, bed ratios, gap analysis | PS-003 |
+| `healthcare-expenditure-analysis-guide.md` *(new)* | THE, decomposition, CAGR | PS-004 |
+| `health-equity-metrics-kpis.md` *(new)* | Disparity ratio, standardisation | PS-005 |
+
+### Detailed User Story Files (57 total)
+
+#### PS-001: Healthcare Workforce Sustainability — 10/10 ✅ P0 Critical
+1. `01-extract-workforce-data.md` (S, 2-3 days)
+2. `02-clean-prepare-workforce-data.md` (M, 4-5 days)
+3. `03-explore-workforce-trends.md` (M, 5-6 days)
+4. `04-workforce-population-ratios.md` (S, 3-4 days)
+5. `05-engineer-forecast-features.md` (M, 4-5 days)
+6. `06-build-forecast-models.md` (L, 8-10 days)
+7. `07-demand-gap-analysis.md` (M, 5-6 days)
+8. `08-scenario-modeling.md` (M, 6-7 days)
+9. `09-validate-forecast-accuracy.md` (S, 3-4 days)
+10. `10-create-workforce-dashboard.md` (L, 8-9 days)
+**Total Effort**: ~55-63 days
+
+#### PS-002: Disease Burden Temporal Trends — 9/9 ✅ P0 Critical
+1. `01-extract-mortality-data.md` (S, 2 days)
+2. `02-clean-standardize-mortality-data.md` (S, 3 days)
+3. `03-analyze-mortality-trends.md` (M, 5 days)
+4. `04-identify-trend-shifts.md` (M, 4-5 days)
+5. `05-comparative-disease-burden.md` (M, 4-5 days)
+6. `06-international-benchmarking.md` (M, 4 days)
+7. `07-disease-burden-prioritization.md` (M, 4 days)
+8. `08-validate-trend-significance.md` (S, 3 days)
+9. `09-create-disease-burden-dashboard.md` (L, 7-8 days)
+**Total Effort**: ~36-42 days
+
+#### PS-003: Healthcare Capacity Optimization — 10/10 ✅ P1 High
+1. `01-extract-capacity-utilization-data.md` (S, 2 days)
+2. `02-clean-integrate-capacity-data.md` (M, 4 days)
+3. `03-analyze-capacity-trends.md` (M, 5 days)
+4. `04-analyze-utilization-patterns.md` (M, 5 days)
+5. `05-calculate-utilization-efficiency.md` (M, 4 days)
+6. `06-identify-capacity-gaps.md` (M, 5 days)
+7. `07-demographic-utilization-profiling.md` (M, 4-5 days)
+8. `08-scenario-capacity-expansion.md` (L, 6-7 days)
+9. `09-validate-capacity-analysis.md` (S, 3 days)
+10. `10-create-capacity-dashboard.md` (L, 8 days)
+**Total Effort**: ~50-57 days
+
+#### PS-004: Healthcare Expenditure Drivers — 9/9 ✅ P0 Critical
+1. `01-extract-expenditure-data.md` (S, 2 days)
+2. `02-integrate-expenditure-drivers.md` (M, 5 days)
+3. `03-analyze-expenditure-trends.md` (M, 5 days)
+4. `04-decompose-expenditure-growth.md` (L, 6-7 days)
+5. `05-correlate-expenditure-utilization.md` (M, 4-5 days)
+6. `06-identify-cost-drivers.md` (M, 5 days)
+7. `07-international-expenditure-benchmarking.md` (M, 5-6 days)
+8. `08-cost-control-opportunities.md` (M, 5 days)
+9. `09-create-expenditure-dashboard.md` (L, 7-8 days)
+**Total Effort**: ~48-56 days
+
+#### PS-005: Healthcare Equity & Disparities — 9/9 ✅ P2 Medium
+1. `01-extract-demographic-health-data.md` (S, 2 days)
+2. `02-prepare-equity-analysis-data.md` (M, 4 days)
+3. `03-analyze-utilization-disparities.md` (M, 5 days)
+4. `04-analyze-outcome-disparities.md` (M, 5 days)
+5. `05-calculate-disparity-metrics.md` (M, 4-5 days)
+6. `06-temporal-equity-trends.md` (M, 4 days)
+7. `07-diagnose-access-barriers.md` (M, 5 days)
+8. `08-prioritize-vulnerable-populations.md` (M, 4 days)
+9. `09-create-equity-dashboard.md` (L, 7-8 days)
+**Total Effort**: ~44-50 days
+
+#### PS-006: Disease Burden Forecasting — 10/10 ✅ P1 High
+1. `01-historical-mortality-data-extraction-validation.md` (S, 2-3 days)
+2. `02-exploratory-time-series-analysis.md` (M, 4-5 days)
+3. `03-temporal-feature-engineering.md` (M, 4 days)
+4. `04-baseline-forecasting-models.md` (M, 5-6 days)
+5. `05-model-validation-backtesting.md` (M, 4-5 days)
+6. `06-five-year-projections-generation.md` (M, 4-5 days)
+7. `07-scenario-based-forecasting.md` (M, 5 days)
+8. `08-capacity-requirement-translation.md` (M, 5-6 days)
+9. `09-interactive-forecast-dashboard.md` (L, 8-9 days)
+10. `10-forecast-monitoring-system.md` (M, 5 days)
+**Total Effort**: ~50-57 days
 
 ---
 

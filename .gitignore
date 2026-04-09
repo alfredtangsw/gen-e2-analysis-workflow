@@ -205,3 +205,22 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Project-specific exclusions
+# Raw data (large, immutable — sourced from Kaggle/external)
+shared/data/1_raw/*/
+shared/data/2_external/*/
+!shared/data/1_raw/.gitkeep
+!shared/data/2_external/.gitkeep
+
+# Trained model artefacts
+problem-statements/**/models/*.pkl
+problem-statements/**/models/*.joblib
+
+# Logs (generated at runtime)
+logs/
+problem-statements/**/logs/
+
+# Processed interim data
+problem-statements/**/data/3_interim/
+problem-statements/**/data/4_processed/

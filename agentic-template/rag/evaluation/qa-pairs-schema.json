@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RAG Ground-Truth QA Eval Set",
+  "description": "Schema for the ground-truth question-answer pairs used to evaluate retrieval and generation quality. Minimum 50 entries required before running retrieval-evaluator or generation-evaluator.",
+  "type": "array",
+  "minItems": 50,
+  "items": {
+    "type": "object",
+    "required": ["id", "question", "answer", "source_doc_ids"],
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier for this QA pair. Use format: qa-{NNN}",
+        "examples": ["qa-001", "qa-042"]
+      },
+      "question": {
+        "type": "string",
+        "description": "A natural language question answerable from the corpus. Should be specific, not vague.",
+        "minLength": 10,
+        "examples": [
+          "What was the total healthcare expenditure in Singapore in 2022?",
+          "Which age group had the highest diabetes prevalence in 2021?"
+        ]
+      },
+      "answer": {
+        "type": "string",
+        "description": "The correct, complete answer to the question. Must be grounded in the corpus — do not paraphrase or add external knowledge.",
+        "minLength": 5,
+        "examples": [
+          "Singapore's total healthcare expenditure in 2022 was SGD 27.7 billion, representing 4.1% of GDP."
+        ]
+      },
+      "source_doc_ids": {
+        "type": "array",
+        "description": "List of doc_id values (from ingestion_manifest.csv) that contain the answer. Used to compute retrieval recall. At least one required.",
+        "minItems": 1,
+        "items": {
+          "type": "string"
+        },
+        "examples": [["annual-report-2022", "moh-statistics-2022"]]
+      },
+      "source_page_or_section": {
+        "type": "string",
+        "description": "Optional. Human-readable reference to where in the source document the answer appears. Helps with debugging retrieval failures.",
+        "examples": ["Page 47, Table 3.2", "Section 4 — Healthcare Financing"]
+      },
+      "difficulty": {
+        "type": "string",
+        "description": "Optional. Subjective difficulty of the question. Helps identify whether failures cluster by difficulty.",
+        "enum": ["easy", "medium", "hard"],
+        "examples": ["medium"]
+      },
+      "question_type": {
+        "type": "string",
+        "description": "Optional. Type of reasoning required. Helps identify failure patterns by question type.",
+        "enum": ["factual", "comparative", "temporal", "causal", "multi-hop", "numerical"],
+        "examples": ["factual", "numerical"]
+      },
+      "notes": {
+        "type": "string",
+        "description": "Optional. Any notes for the evaluator — e.g., known ambiguity, multiple valid answers, recency sensitivity.",
+        "examples": ["Answer may vary by year — ensure retrieved context is from 2022 specifically."]
+      }
+    },
+    "additionalProperties": false
+  },
+  "examples": [
+    [
+      {
+        "id": "qa-001",
+        "question": "What was the hospital bed-to-population ratio in Singapore in 2022?",
+        "answer": "Singapore had approximately 2.4 hospital beds per 1,000 population in 2022.",
+        "source_doc_ids": ["moh-statistics-2022"],
+        "source_page_or_section": "Section 3, Table 3.1",
+        "difficulty": "easy",
+        "question_type": "factual"
+      },
+      {
+        "id": "qa-002",
+        "question": "How did diabetes prevalence in Singapore change between 2010 and 2020?",
+        "answer": "Diabetes prevalence in Singapore increased from 11.3% in 2010 to 13.7% in 2020 among adults aged 18–69.",
+        "source_doc_ids": ["nphs-2020", "nphs-2010"],
+        "source_page_or_section": "NPHS 2020, Chapter 2",
+        "difficulty": "medium",
+        "question_type": "temporal"
+      }
+    ]
+  ]
+}

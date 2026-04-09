@@ -8,7 +8,7 @@ dependencies: None
 platform: HEALIX/Databricks
 primary_language: Python (Polars)
 estimated_sprints: 4-6
-priority: P1 (High)
+priority: P0 (Critical)
 ```
 
 ---

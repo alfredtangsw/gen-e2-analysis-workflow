@@ -1,0 +1,41 @@
+# Retrieval quality thresholds — update before running retrieval-evaluator
+# The pipeline will FAIL (status: failure) if any blocking metric falls below its threshold.
+
+retrieval:
+  top_k: 5
+  metrics:
+    precision_at_k:
+      threshold: 0.75
+      blocking: true       # Pipeline halts if below threshold
+      remediation: "Reduce chunk_size in rag-stack.md, or increase top_k, or switch embedding model."
+    recall_at_k:
+      threshold: 0.70
+      blocking: true
+      remediation: "Increase top_k, or use MMR retrieval strategy to improve coverage."
+    mrr:
+      threshold: 0.65
+      blocking: true
+      remediation: "Improve chunk boundaries (recursive chunking) or add a reranker."
+    hit_rate:
+      threshold: 0.80
+      blocking: false      # Warning only — logged but does not halt pipeline
+      remediation: "Review questions in eval set where hit=false to identify retrieval gaps."
+
+generation:
+  metrics:
+    faithfulness:
+      threshold: 0.80
+      blocking: true
+      remediation: "LLM is adding content beyond retrieved context. Tighten the RAG prompt or set temperature=0."
+    answer_relevancy:
+      threshold: 0.75
+      blocking: true
+      remediation: "Answers are off-topic. This is likely a retrieval issue — check retrieval metrics first."
+    context_precision:
+      threshold: 0.70
+      blocking: false      # Warning only
+      remediation: "Noisy retrieved context. Add a cross-encoder reranker or reduce top_k."
+
+latency:
+  query_latency_p95_ms: 3000    # Warning if exceeded; not blocking
+  generation_latency_p95_ms: 8000

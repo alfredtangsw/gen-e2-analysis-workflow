@@ -51,4 +51,12 @@ This epic decomposes the health equity analysis into 9 sprint-ready user stories
 
 ---
 
-**Last Updated**: March 11, 2026
+## Domain Knowledge References
+
+- [Health Equity Metrics & KPIs](../../../../domain-knowledge/health-equity-metrics-kpis.md) — Disparity ratio, absolute disparity, age-standardisation, concentration index. **Key data constraint documented**: SES and ethnicity data not available in current dataset.
+- [Disease Burden Feature Engineering Guide](../../../../domain-knowledge/disease-burden-feature-engineering-guide.md) — Mortality rate methodology for outcome disparity analysis
+- [Healthcare Capacity & Utilization Metrics](../../../../domain-knowledge/healthcare-capacity-utilization-metrics-kpis.md) — Utilisation metrics for access equity analysis
+
+---
+
+**Last Updated**: 2026-04-08

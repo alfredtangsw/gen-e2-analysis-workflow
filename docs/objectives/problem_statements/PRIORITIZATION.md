@@ -1,6 +1,6 @@
 # Problem Statement Prioritization Analysis
 
-**Date**: 2026-03-11  
+**Date**: 2026-04-08  
 **Author**: Data Analysis Team  
 **Purpose**: Objective prioritization of identified problem statements for Gen-E2 Singapore Health Trends Analysis Project
 
@@ -173,6 +173,35 @@ Each problem statement is scored on three dimensions (1-5 scale):
 
 ---
 
+### PS-006: Five-Year Disease Burden Forecasting and Mortality Projection (Predictive)
+
+**Business Value: 4/5**
+- **Direct alignment** with MOH goal: Proactive healthcare capacity planning and future-readiness
+- **Stakeholder enabling**: Strategic planners and healthcare capacity planners gain 5-year demand foresight
+- **Decisions enabled**: Hospital expansion, clinical service scaling, public health program sizing
+- **Strategic importance**: Converts descriptive trend insight (PS-002) into actionable forecasts
+- **Justification**: High strategic value for proactive planning; -1 relative to PS-001/PS-004 as it builds on PS-002 output and benefits from sequencing
+
+**Feasibility: 4/5**
+- **Data availability**: ✅ 30-year mortality time series confirmed (1990-2019) — excellent for forecasting
+- **Data quality**: ✅ 100% complete, age-standardized rates, official source
+- **Technical complexity**: Moderate-High - ARIMA/Prophet/SARIMAX + confidence intervals + backtesting; well-established methods
+- **Resource requirements**: Medium-High - Forecasting analyst; 5-7 sprints estimated
+- **Known constraints**: 7-year data lag (data ends 2019); COVID-19 disruption may affect trend continuity
+- **Justification**: Good data for forecasting; -1 for COVID uncertainty and multi-model evaluation overhead
+
+**Urgency: 3/5**
+- **Stakeholder urgency**: Medium - Demand forecasts are valuable for planning but capital decisions operate on long cycles
+- **Time sensitivity**: Medium - Healthcare planning horizons are 5-10 years; some immediacy but not crisis-driven
+- **Policy deadlines**: None immediate; benefits from being scheduled after PS-002 establishes trend baseline
+- **Dependencies**: PS-002 recommended input (trend patterns, inflection points) but not blocking
+- **Justification**: High-value but sequencing after PS-002 reduces urgency; no hard deadline
+
+**Total Score**: (4 × 0.4) + (4 × 0.3) + (3 × 0.3) = **1.6 + 1.2 + 0.9 = 3.7**  
+**Priority Assignment**: **P1 (High)**
+
+---
+
 ## Prioritized Problem Statement Portfolio
 
 ### P0 (Critical) - Immediate Start Recommended
@@ -194,7 +223,7 @@ Each problem statement is scored on three dimensions (1-5 scale):
 - **Rationale**: Excellent feasibility (perfect data, low complexity) + solid business value; foundational for public health strategy
 - **Recommended Action**: Start in Sprint 1-2 (after PS-001 and PS-004 initiated if resource-constrained)
 - **Resource Allocation**: Medium priority - can assign mid-level analyst
-- **Dependencies**: None - can proceed independently
+- **Dependencies**: None - can proceed independently; feeds PS-006
 
 ### P1 (High) - Near-Term Start (Within 3-6 Months)
 
@@ -204,9 +233,15 @@ Each problem statement is scored on three dimensions (1-5 scale):
 - **Resource Allocation**: Medium-High priority - allocate experienced analyst with operations research skills
 - **Dependencies**: May benefit from PS-001 findings (workforce constraints affect capacity planning) but not blocking
 
+**5. PS-006: Disease Burden Forecasting (Score: 3.7)**
+- **Rationale**: High value predictive extension of PS-002; moderate-high technical lift; benefits from PS-002 trend insights
+- **Recommended Action**: Start after PS-002 completes or in parallel if staffing allows
+- **Resource Allocation**: Medium priority - allocate forecasting analyst for 5-7 sprints
+- **Dependencies**: PS-002 recommended as input (not blocking)
+
 ### P2 (Medium) - Planned Start (6-12 Months)
 
-**5. PS-005: Healthcare Access Equity (Score: 2.4)**
+**6. PS-005: Healthcare Access Equity (Score: 2.4)**
 - **Rationale**: Important for social mission but constrained by data limitations (missing socioeconomic/ethnic variables); lower urgency (no pressing deadlines)
 - **Recommended Action**: Defer until P0/P1 problem statements completed; consider data enhancement efforts first
 - **Resource Allocation**: Low-Medium priority - assign when resources available
