@@ -1,0 +1,16 @@
+feature,type,description
+year,temporal,Calendar year
+profession,categorical,Healthcare profession category
+headcount,target,Total workforce headcount
+total_population,external,Singapore total population
+density_per_10k_pop,derived,"Workers per 10,000 population"
+yoy_growth_pct,growth,Year-over-year headcount growth %
+lag1_headcount,lag,Headcount lagged 1 year
+lag2_headcount,lag,Headcount lagged 2 years
+roll3_mean,rolling,3-year rolling mean headcount
+roll3_std,rolling,3-year rolling std headcount
+cagr_cumulative_pct,growth,Cumulative CAGR from baseline %
+t_index,temporal,Years since first observation (0-based)
+log_headcount,derived,Natural log of headcount for log-linear models
+elderly_admission_rate,external,Mean admission rate per 1000 for 65+ age groups (demand proxy)
+total_facilities,external,Total healthcare facilities count

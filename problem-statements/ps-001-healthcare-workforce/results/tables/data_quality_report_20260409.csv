@@ -1,0 +1,7 @@
+dataset,row_count,column_count,total_nulls,duplicates,year_min,year_max,negative_headcounts,quality_flag
+doctors,210,4,0,0,2006,2019,0,PASS
+nurses,252,4,0,0,2008,2019,0,PASS
+pharmacists,42,3,0,0,2006,2019,0,PASS
+dentists,42,3,0,0,2006,2019,0,PASS
+allied_health,252,4,0,0,2006,2019,0,PASS
+master_workforce,68,5,0,0,2006,2019,0,PASS

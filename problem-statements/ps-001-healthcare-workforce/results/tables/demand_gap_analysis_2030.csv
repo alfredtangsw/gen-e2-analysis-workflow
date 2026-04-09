@@ -1,0 +1,6 @@
+profession,supply_2030,demand_2030,gap_2030,gap_severity
+dentists,6016,5221,795,SURPLUS
+doctors,26067,23626,2441,SURPLUS
+pharmacists,15073,10590,4483,SURPLUS
+allied_health,18901,13687,5214,SURPLUS
+nurses,98012,79722,18290,SURPLUS

@@ -1,0 +1,5 @@
+scenario,doctors_2030,demand_2030,gap
+Baseline (current trajectory),26067,23626,2441
+Accelerated training (+10% intakes),28152,23626,4526
+International recruitment (+5%/yr),29195,23626,5569
+Combined intervention,30759,23626,7133

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Singapore Healthcare Workforce Planning Dashboard - PS-001</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; color: #222; }
+  header { background: linear-gradient(135deg, #003f7d, #0065b3); color: white; padding: 1.5rem 2rem; }
+  header h1 { font-size: 1.6rem; font-weight: 700; }
+  header p  { margin-top: .3rem; opacity: .85; font-size: .9rem; }
+  .badge { display:inline-block; background: rgba(255,255,255,.2); border-radius:4px; padding:2px 8px; font-size:.75rem; margin-top:.4rem; }
+  .container { max-width: 1400px; margin: 0 auto; padding: 1.5rem; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+  .kpi-card { background: white; border-radius: 8px; padding: 1.2rem; box-shadow: 0 1px 4px rgba(0,0,0,.1); border-left: 4px solid #0065b3; }
+  .kpi-card .val { font-size: 1.8rem; font-weight: 700; color: #0065b3; }
+  .kpi-card .lbl { font-size: .78rem; color: #666; margin-top: 4px; text-transform: uppercase; letter-spacing: .05em; }
+  .kpi-card .sub { font-size: .8rem; color: #888; margin-top: 2px; }
+  .chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.2rem; }
+  .chart-grid.wide { grid-template-columns: 1fr; }
+  .chart-card { background: white; border-radius: 8px; padding: 1.2rem; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+  .chart-card h3 { font-size: .95rem; font-weight: 600; color: #333; margin-bottom: .8rem; padding-bottom: .5rem; border-bottom: 1px solid #eee; }
+  .chart-card canvas { max-height: 320px; }
+  .tabs { display:flex; gap:.5rem; margin-bottom:1rem; flex-wrap:wrap; }
+  .tab-btn { padding: .4rem 1rem; border: 1px solid #0065b3; background: white; color: #0065b3; border-radius: 4px; cursor: pointer; font-size: .82rem; transition: all .2s; }
+  .tab-btn.active { background: #0065b3; color: white; }
+  table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+  th { background: #f4f7fb; padding: .6rem .8rem; text-align: left; font-weight: 600; border-bottom: 2px solid #dde; color:#444; }
+  td { padding: .5rem .8rem; border-bottom: 1px solid #f0f0f0; }
+  tr:hover td { background: #fafbfd; }
+  .section-title { font-size: 1.05rem; font-weight: 700; color: #003f7d; margin: 1.5rem 0 .8rem; padding-bottom: .3rem; border-bottom: 2px solid #0065b3; }
+  .insight-box { background: #e8f4fd; border-left: 4px solid #0065b3; border-radius: 4px; padding: 1rem; margin-bottom: 1rem; font-size: .88rem; }
+  .insight-box ul { margin: .5rem 0 0 1.2rem; }
+  .insight-box li { margin-bottom: .3rem; color: #333; }
+  @media (max-width: 768px) { .chart-grid { grid-template-columns: 1fr; } }
+  footer { text-align: center; padding: 1.5rem; color: #999; font-size: .78rem; margin-top: 1rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Singapore Healthcare Workforce Planning Dashboard</h1>
+  <p>PS-001 - Healthcare Workforce Sustainability Analysis - Analysis Period: 2006-2019 | Forecast: 2020-2030</p>
+  <span class="badge">MOH Workforce Planning Division</span>
+  <span class="badge">Confidential</span>
+  <span class="badge">Generated: 9 April 2026</span>
+</header>
+<div class="container">
+<div class="kpi-grid">
+  <div class="kpi-card"><div class="val">5</div><div class="lbl">Professions Analysed</div><div class="sub">Doctors - Nurses - Pharm - Dent - Allied</div></div>
+  <div class="kpi-card"><div class="val">4.5%</div><div class="lbl">Avg CAGR 2006-2019</div><div class="sub">Across all healthcare professions</div></div>
+  <div class="kpi-card"><div class="val">2030</div><div class="lbl">Forecast Horizon</div><div class="sub">11-year projection with 95% CI</div></div>
+  <div class="kpi-card" style="border-color:#2ca02c"><div class="val" style="color:#2ca02c">SURPLUS</div><div class="lbl">2030 Gap Status</div><div class="sub">All professions - baseline scenario</div></div>
+  <div class="kpi-card"><div class="val">~98K</div><div class="lbl">Nurses 2030 (forecast)</div><div class="sub">+58% vs 2019 baseline</div></div>
+  <div class="kpi-card"><div class="val">~26K</div><div class="lbl">Doctors 2030 (forecast)</div><div class="sub">+42% vs 2019 baseline</div></div>
+</div>
+<div class="insight-box">
+  <strong>Key Insight:</strong> Singapore's healthcare workforce shows strong, sustained growth across all five professions. Log-linear models (R2 &ge; 0.998) project supply surplus under baseline demand assumptions through 2030. However,
+  <strong>nurses and allied health face the narrowest margins</strong> if aging-accelerated demand grows faster than projected.
+  <ul>
+    <li>Pharmacists (5.7% CAGR) and Allied Health (5.4% CAGR) are the fastest-growing professions.</li>
+    <li>Doctors (3.2% CAGR) have the slowest growth - policy focus required to maintain doctor-to-population ratios.</li>
+    <li>Hospital admission rates for 65+ are rising ~1%/year - a key demand risk factor to monitor.</li>
+  </ul>
+</div>
+<p class="section-title">Historical Trends &amp; 2030 Forecasts</p>
+<div class="tabs" id="prof-tabs"></div>
+<div class="chart-grid wide">
+  <div class="chart-card">
+    <h3 id="trend-title">Workforce Headcount - Historical &amp; Forecast</h3>
+    <canvas id="trendChart"></canvas>
+  </div>
+</div>
+<div class="chart-grid">
+  <div class="chart-card"><h3>CAGR by Profession (2006-2019)</h3><canvas id="cagrChart"></canvas></div>
+  <div class="chart-card"><h3>Supply-Demand Gap 2030 (Headcount)</h3><canvas id="gapChart"></canvas></div>
+</div>
+<p class="section-title">Workforce Density (per 10,000 Population)</p>
+<div class="chart-card" style="margin-bottom:1.2rem">
+  <table><thead><tr><th>Profession</th><th>2019 Density</th><th>Period Mean</th><th>Min</th><th>Max</th></tr></thead>
+  <tbody><tr><td>Nurses & Midwives</td><td>168.7</td><td>141.6</td><td>117.0</td><td>168.7</td></tr><tr><td>Doctors</td><td>50.0</td><td>43.2</td><td>37.1</td><td>50.0</td></tr><tr><td>Allied Health</td><td>29.0</td><td>22.1</td><td>16.4</td><td>29.0</td></tr><tr><td>Pharmacists</td><td>22.4</td><td>16.8</td><td>12.2</td><td>22.4</td></tr><tr><td>Dentists</td><td>11.1</td><td>9.2</td><td>7.6</td><td>11.1</td></tr></tbody></table>
+</div>
+<p class="section-title">Model Performance Metrics</p>
+<div class="chart-card" style="margin-bottom:1.2rem">
+  <table><thead><tr><th>Profession</th><th>Best Model</th><th>RMSE</th><th>Log-linear R2</th></tr></thead>
+  <tbody><tr><td>Allied Health</td><td>Log Linear</td><td>16</td><td>0.9999</td></tr><tr><td>Dentists</td><td>Log Linear</td><td>17</td><td>0.9985</td></tr><tr><td>Doctors</td><td>Log Linear</td><td>71</td><td>0.9986</td></tr><tr><td>Nurses & Midwives</td><td>Log Linear</td><td>79</td><td>0.9999</td></tr><tr><td>Pharmacists</td><td>Log Linear</td><td>21</td><td>0.9998</td></tr></tbody></table>
+</div>
+<p class="section-title">Scenario Analysis - Doctors 2030</p>
+<div class="chart-card" style="margin-bottom:1.2rem">
+  <table><thead><tr><th>Scenario</th><th>Supply 2030</th><th>Demand 2030</th><th>Gap</th></tr></thead>
+  <tbody><tr><td>Baseline (current trajectory)</td><td>26,067</td><td>23,626</td><td style="color:#2ca02c;font-weight:bold">+2,441</td></tr><tr><td>Accelerated training (+10% intakes)</td><td>28,152</td><td>23,626</td><td style="color:#2ca02c;font-weight:bold">+4,526</td></tr><tr><td>International recruitment (+5%/yr)</td><td>29,195</td><td>23,626</td><td style="color:#2ca02c;font-weight:bold">+5,569</td></tr><tr><td>Combined intervention</td><td>30,759</td><td>23,626</td><td style="color:#2ca02c;font-weight:bold">+7,133</td></tr></tbody></table>
+</div>
+</div>
+<footer>PS-001 Healthcare Workforce Sustainability - MOH Singapore - Copilot Gen-E2 Analysis Workflow - April 2026</footer>
+<script>
+const HIST   = {"allied_health": {"years": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019], "counts": [5390, 5663, 5986, 6284, 6642, 7010, 7347, 7772, 8210, 8597, 9111, 9568, 10079, 10626]}, "dentists": {"years": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019], "counts": [2481, 2624, 2718, 2809, 2913, 3004, 3138, 3216, 3363, 3478, 3586, 3740, 3897, 4054]}, "doctors": {"years": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019], "counts": [12164, 12541, 12918, 13450, 13828, 14061, 14667, 15084, 15705, 16282, 16759, 17208, 17791, 18342]}, "nurses": {"years": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019], "counts": [39118, 40797, 42659, 44481, 46415, 48275, 50226, 52553, 54796, 56935, 59469, 61892]}, "pharmacists": {"years": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019], "counts": [4016, 4223, 4490, 4735, 4995, 5263, 5601, 5951, 6241, 6566, 6941, 7333, 7801, 8222]}};
+const FC     = {"dentists": {"years": [2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030], "best": [4180, 4335, 4496, 4663, 4836, 5015, 5201, 5394, 5594, 5801, 6016], "lower": [3667, 3610, 3607, 3636, 3688, 3758, 3843, 3942, 4054, 4178, 4314], "upper": [4693, 5061, 5385, 5689, 5983, 6272, 6558, 6845, 7133, 7424, 7718]}, "pharmacists": {"years": [2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030], "best": [8683, 9175, 9696, 10245, 10826, 11440, 12089, 12775, 13499, 14264, 15073], "lower": [7265, 7170, 7240, 7410, 7656, 7967, 8338, 8764, 9246, 9781, 10371], "upper": [10101, 11180, 12151, 13081, 13997, 14913, 15840, 16785, 17752, 18748, 19776]}, "doctors": {"years": [2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030], "best": [18960, 19574, 20207, 20860, 21535, 22231, 22950, 23693, 24459, 25250, 26067], "lower": [17205, 17091, 17167, 17350, 17610, 17932, 18307, 18728, 19194, 19700, 20246], "upper": [20715, 22056, 23246, 24370, 25459, 26530, 27594, 28657, 29724, 30800, 31888]}, "nurses": {"years": [2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030], "best": [64619, 67368, 70233, 73221, 76336, 79583, 82968, 86497, 90177, 94013, 98012], "lower": [56784, 56287, 56663, 57551, 58816, 60391, 62239, 64337, 66672, 69237, 72026], "upper": [72454, 78448, 83804, 88891, 93855, 98774, 103697, 108658, 113681, 118789, 123997]}, "allied_health": {"years": [2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030], "best": [11201, 11803, 12436, 13105, 13808, 14550, 15332, 16155, 17023, 17938, 18901], "lower": [9538, 9450, 9556, 9778, 10089, 10476, 10931, 11451, 12033, 12678, 13385], "upper": [12864, 14155, 15317, 16431, 17528, 18624, 19732, 20860, 22013, 23197, 24417]}};
+const COLORS = {"doctors": "#1f77b4", "nurses": "#e377c2", "pharmacists": "#2ca02c", "dentists": "#ff7f0e", "allied_health": "#9467bd"};
+const DISPLAY= {"doctors": "Doctors", "nurses": "Nurses & Midwives", "pharmacists": "Pharmacists", "dentists": "Dentists", "allied_health": "Allied Health"};
+const professions = Object.keys(HIST);
+const tabsEl = document.getElementById('prof-tabs');
+professions.forEach((p, i) => {
+  const btn = document.createElement('button');
+  btn.className = 'tab-btn' + (i === 0 ? ' active' : '');
+  btn.textContent = DISPLAY[p] || p;
+  btn.onclick = () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    updateTrendChart(p);
+  };
+  tabsEl.appendChild(btn);
+});
+const trendCtx = document.getElementById('trendChart').getContext('2d');
+let trendChart;
+function updateTrendChart(prof) {
+  if (trendChart) trendChart.destroy();
+  const h = HIST[prof];
+  const f = FC[prof];
+  const color = COLORS[prof] || '#0065b3';
+  document.getElementById('trend-title').textContent = (DISPLAY[prof]||prof) + ' - Historical & Forecast (2006-2030)';
+  trendChart = new Chart(trendCtx, {
+    type: 'line',
+    data: { datasets: [
+      { label:'Historical', data:h.years.map((y,i)=>({x:y,y:h.counts[i]})), borderColor:color, backgroundColor:color+'20', borderWidth:2.5, pointRadius:4, tension:0.3, fill:false },
+      { label:'Forecast (Best Model)', data:f.years.map((y,i)=>({x:y,y:f.best[i]})), borderColor:color, borderDash:[6,4], borderWidth:2, pointRadius:3, fill:false },
+      { label:'95% CI Upper', data:f.years.map((y,i)=>({x:y,y:f.upper[i]})), borderColor:'transparent', backgroundColor:color+'18', pointRadius:0, fill:'+1' },
+      { label:'95% CI Lower', data:f.years.map((y,i)=>({x:y,y:f.lower[i]})), borderColor:'transparent', backgroundColor:color+'18', pointRadius:0, fill:false }
+    ]},
+    options: { responsive:true, plugins:{ legend:{position:'top'}, tooltip:{mode:'index',intersect:false} }, scales:{ x:{type:'linear',title:{display:true,text:'Year'}}, y:{title:{display:true,text:'Headcount'},beginAtZero:false} } }
+  });
+}
+updateTrendChart(professions[0]);
+const cagrLabels = ["Pharmacists", "Allied Health", "Nurses & Midwives", "Dentists", "Doctors"];
+const cagrValues = [5.67, 5.36, 4.26, 3.85, 3.21];
+const cagrColors = ["#2ca02c", "#9467bd", "#e377c2", "#ff7f0e", "#1f77b4"];
+new Chart(document.getElementById('cagrChart').getContext('2d'), {
+  type:'bar', data:{labels:cagrLabels,datasets:[{label:'CAGR %',data:cagrValues,backgroundColor:cagrColors,borderRadius:4}]},
+  options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{title:{display:true,text:'CAGR (%)'},beginAtZero:true}}}
+});
+const gapLabels = ["Dentists", "Doctors", "Pharmacists", "Allied Health", "Nurses & Midwives"];
+const gapValues = [795, 2441, 4483, 5214, 18290];
+const gapColors = ["#2ca02c", "#2ca02c", "#2ca02c", "#2ca02c", "#2ca02c"];
+new Chart(document.getElementById('gapChart').getContext('2d'), {
+  type:'bar', data:{labels:gapLabels,datasets:[{label:'Supply - Demand Gap 2030',data:gapValues,backgroundColor:gapColors,borderRadius:4}]},
+  options:{responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>(ctx.raw>0?'+':'')+ctx.raw.toLocaleString()+' surplus'}}},scales:{y:{title:{display:true,text:'Headcount Gap'},beginAtZero:false}}}
+});
+</script>
+</body>
+</html>

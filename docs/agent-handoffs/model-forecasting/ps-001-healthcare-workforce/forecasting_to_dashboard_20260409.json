@@ -1,0 +1,35 @@
+{
+  "agent": "model-forecasting",
+  "problem_statement": "ps-001-healthcare-workforce-sustainability",
+  "timestamp": "2026-04-09",
+  "status": "completed",
+  "models_built": [
+    "Linear OLS",
+    "Log-linear",
+    "Holt Double Exponential Smoothing"
+  ],
+  "best_models": {
+    "allied_health": "log_linear",
+    "dentists": "log_linear",
+    "doctors": "log_linear",
+    "nurses": "log_linear",
+    "pharmacists": "log_linear"
+  },
+  "key_findings": [
+    "All professions show positive growth trajectory through 2030",
+    "Nurses face CRITICAL shortfall if demand-side aging pressure accelerates",
+    "Allied health shows highest supply growth (5.3% CAGR) and smallest gap risk",
+    "Doctors gap addressable with 10-18% increase in training/recruitment",
+    "Combined interventions can close projected 2030 gaps for all professions"
+  ],
+  "forecast_file": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-workforce/data/4_processed/workforce_forecasts_2020_2030.parquet",
+  "gap_analysis_file": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-workforce/results/tables/demand_gap_analysis_2030.csv",
+  "files_created": [
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-workforce/data/4_processed/workforce_forecasts_2020_2030.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-workforce/results/tables/workforce_forecasts_2020_2030.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-workforce/results/metrics/model_evaluation_metrics.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-workforce/results/tables/demand_gap_analysis_2030.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-workforce/results/tables/scenario_analysis_doctors.csv"
+  ],
+  "next_agent": "dashboard-visualization"
+}

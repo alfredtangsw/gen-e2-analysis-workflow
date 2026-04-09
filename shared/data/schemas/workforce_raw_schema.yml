@@ -1,0 +1,51 @@
+# PS-001 Healthcare Workforce Raw Data Schema
+# Generated: 2026-04-09
+
+datasets:
+  number-of-doctors:
+    file: number-of-doctors.csv
+    records: 210
+    columns: [year, sector, level, headcount]
+    year_range: [2006, 2019]
+    
+  number-of-nurses-and-midwives:
+    file: number-of-nurses-and-midwives.csv
+    records: 252
+    columns: [year, sector, nurse_type, headcount]
+    year_range: [2008, 2019]
+    
+  number-of-pharmacists:
+    file: number-of-pharmacists.csv
+    records: 42
+    columns: [year, sector, headcount]
+    year_range: [2006, 2019]
+    
+  number-of-dentists:
+    file: number-of-dentists.csv
+    records: 42
+    columns: [year, sector, headcount]
+    year_range: [2006, 2019]
+    
+  number-of-allied-health-professionals:
+    file: number-of-allied-health-professionals.csv
+    records: 252
+    columns: [year, profession, sector, headcount]
+    year_range: [2006, 2019]
+    
+  hospital-admission-rate-by-age-and-sex:
+    file: hospital-admission-rate-by-age-and-sex.csv
+    records: 320
+    columns: [year, age_group, sex, admission_rate_per_1000]
+    year_range: [2006, 2021]
+    
+  health-facilities-and-beds:
+    file: health-facilities-and-beds-in-inpatient-facilities.csv
+    records: 80
+    columns: [year, facility_type, facility_count, beds]
+    year_range: [2006, 2021]
+    
+  singapore-population-by-age:
+    file: singapore-population-by-age.csv
+    records: 250
+    columns: [year, age_group, population]
+    year_range: [2006, 2030]

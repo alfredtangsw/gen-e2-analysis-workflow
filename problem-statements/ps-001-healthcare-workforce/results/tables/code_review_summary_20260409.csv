@@ -1,0 +1,9 @@
+check,status,notes
+raw_csv_count,PASS,8/8 expected
+parquet_files_valid,PASS,12 parquet files
+forecast_table_55_rows,PASS,55 rows (5 profs x 11 yrs)
+gap_analysis_5_rows,PASS,5 rows
+feature_dataset_15_cols,PASS,15 columns
+feature_no_critical_nulls,PASS,0 critical nulls
+dashboard_html_valid,PASS,"13.8KB, chartjs=True"
+handoff_files,PASS,7 handoff files

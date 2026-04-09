@@ -1,0 +1,6 @@
+profession,linear_rmse,linear_r2,loglinear_rmse,loglinear_r2,holt_rmse,best_model,best_rmse
+allied_health,149.8,0.9915,15.6,0.9999,160.7,log_linear,15.6
+dentists,37.8,0.9936,17.1,0.9985,42.8,log_linear,17.1
+doctors,136.0,0.995,70.8,0.9986,138.6,log_linear,70.8
+nurses,418.5,0.9966,78.6,0.9999,518.5,log_linear,78.6
+pharmacists,129.1,0.9902,20.8,0.9998,141.3,log_linear,20.8
