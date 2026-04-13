@@ -1,0 +1,4 @@
+disease,asmr_2019,apc_pct,burden_score,urgency_score,label
+cancer,164.3,-0.959,164.3,0.959,Monitor
+ischaemic_heart_disease,40.9,-5.781,40.9,5.781,Monitor
+stroke,34.7,-4.464,34.7,4.464,Monitor

@@ -1,0 +1,13 @@
+disease,scenario,asmr_2030,asmr_2019_baseline
+cancer,Baseline (current trend),147.7,164.3
+cancer,Accelerated improvement (-20% APC),144.6,164.3
+cancer,Deterioration (+20% worse APC),150.9,164.3
+cancer,Best case (OECD target),140.0,164.3
+ischaemic_heart_disease,Baseline (current trend),21.2,40.9
+ischaemic_heart_disease,Accelerated improvement (-20% APC),18.5,40.9
+ischaemic_heart_disease,Deterioration (+20% worse APC),24.3,40.9
+ischaemic_heart_disease,Best case (OECD target),60.0,40.9
+stroke,Baseline (current trend),21.0,34.7
+stroke,Accelerated improvement (-20% APC),19.0,34.7
+stroke,Deterioration (+20% worse APC),23.3,34.7
+stroke,Best case (OECD target),40.0,34.7

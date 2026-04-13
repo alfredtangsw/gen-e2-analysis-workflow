@@ -1,0 +1,19 @@
+{
+  "agent": "dashboard-visualization",
+  "problem_statement": "ps-002-disease-burden-temporal-trends",
+  "timestamp": "2026-04-10",
+  "status": "success",
+  "dashboard_file": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/reports/disease_burden_dashboard_ps002.html",
+  "size_kb": 21.5,
+  "charts": [
+    "Historical+forecast trend per disease (tabbed)",
+    "Year-over-year change panel",
+    "Cumulative decline from 1990 baseline",
+    "International benchmarking table",
+    "2030 forecast + scenario tables",
+    "Model performance table"
+  ],
+  "files_created": [
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/reports/disease_burden_dashboard_ps002.html"
+  ]
+}

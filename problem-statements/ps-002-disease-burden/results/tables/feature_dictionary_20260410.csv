@@ -1,0 +1,14 @@
+feature,type,description
+year,temporal,Calendar year
+disease,categorical,Disease category
+asmr_per_100k,target,Age-standardised mortality rate per 100k
+yoy_change_pct,growth,Year-over-year % change in ASMR
+lag1_asmr,lag,ASMR lagged 1 year
+lag2_asmr,lag,ASMR lagged 2 years
+roll3_mean,rolling,3-year rolling mean ASMR
+roll5_mean,rolling,5-year rolling mean ASMR
+roll3_std,rolling,3-year rolling std ASMR
+log_asmr,derived,Natural log of ASMR
+t_index,temporal,Years since 1990 (0-based)
+cagr_cumulative,growth,Cumulative CAGR from 1990 %
+detrended_residual,derived,Residual from linear trend

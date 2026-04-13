@@ -1,0 +1,23 @@
+{
+  "agent": "feature-engineering",
+  "problem_statement": "ps-002-disease-burden-temporal-trends",
+  "timestamp": "2026-04-10",
+  "status": "success",
+  "key_findings": [
+    "IHD ASMR declined most dramatically: ~320\u2192~80 per 100k (75% reduction)",
+    "Stroke ASMR also sharply reduced: ~130\u2192~35 (73% reduction)",
+    "Cancer ASMR improving more slowly: ~215\u2192~149 (31% reduction)",
+    "Singapore 2019 rates BELOW WHO global average for all three diseases",
+    "Singapore beats OECD average for stroke; slightly above for cancer"
+  ],
+  "feature_dataset": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/data/4_processed/ps-002-mortality-features-20260410.parquet",
+  "files_created": [
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/results/tables/disease_burden_eda_summary.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/results/tables/gender_gap_2019.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/results/tables/joinpoint_analysis.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/results/tables/international_benchmarking.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/results/tables/feature_dictionary_20260410.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/data/4_processed/ps-002-mortality-features-20260410.parquet"
+  ],
+  "next_agent": "model-forecasting"
+}

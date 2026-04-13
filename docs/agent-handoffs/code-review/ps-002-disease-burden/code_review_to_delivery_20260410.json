@@ -1,0 +1,10 @@
+{
+  "agent": "code-quality",
+  "problem_statement": "ps-002-disease-burden-temporal-trends",
+  "timestamp": "2026-04-10",
+  "status": "success",
+  "checks_pass": 10,
+  "checks_fail": 0,
+  "checks_total": 10,
+  "review_file": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/results/tables/code_review_summary_20260410.csv"
+}

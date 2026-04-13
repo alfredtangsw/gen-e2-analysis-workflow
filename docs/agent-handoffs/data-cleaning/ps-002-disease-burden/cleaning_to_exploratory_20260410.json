@@ -1,0 +1,48 @@
+{
+  "agent": "data-cleaning",
+  "problem_statement": "ps-002-disease-burden-temporal-trends",
+  "timestamp": "2026-04-10",
+  "status": "success",
+  "cleaned_datasets": [
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/data/4_processed/cancer_mortality_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/data/4_processed/stroke_mortality_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/data/4_processed/ihd_mortality_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/data/4_processed/mortality_master_clean.parquet"
+  ],
+  "validation_summary": [
+    {
+      "dataset": "cancer",
+      "rows": 90,
+      "nulls": 0,
+      "negative_rates": 0,
+      "year_range_ok": true,
+      "status": "PASS"
+    },
+    {
+      "dataset": "stroke",
+      "rows": 90,
+      "nulls": 0,
+      "negative_rates": 0,
+      "year_range_ok": true,
+      "status": "PASS"
+    },
+    {
+      "dataset": "ihd",
+      "rows": 90,
+      "nulls": 0,
+      "negative_rates": 0,
+      "year_range_ok": true,
+      "status": "PASS"
+    },
+    {
+      "dataset": "master",
+      "rows": 90,
+      "nulls": 0,
+      "negative_rates": 0,
+      "year_range_ok": true,
+      "status": "PASS"
+    }
+  ],
+  "overall_quality_score": 99,
+  "next_agent": "exploratory-analysis"
+}

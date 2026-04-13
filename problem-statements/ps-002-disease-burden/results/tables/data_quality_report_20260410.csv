@@ -1,0 +1,5 @@
+dataset,rows,nulls,negative_rates,year_range_ok,status
+cancer,90,0,0,true,PASS
+stroke,90,0,0,true,PASS
+ihd,90,0,0,true,PASS
+master,90,0,0,true,PASS

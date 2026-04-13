@@ -1,0 +1,4 @@
+disease,display_name,asmr_1990,asmr_2019,cagr_pct,apc_pct,r2,peak_year,total_change_pct,trend_direction
+ischaemic_heart_disease,Ischaemic Heart Disease,250.2,40.9,-6.055,-5.781,0.9341,1990,-83.7,DECLINING
+stroke,Stroke,129.3,34.7,-4.432,-4.464,0.9696,1990,-73.1,DECLINING
+cancer,Cancer,215.6,164.3,-0.933,-0.959,0.9915,1991,-23.8,DECLINING

@@ -1,0 +1,11 @@
+check,status,detail
+Raw CSVs present,PASS,5/5 raw CSVs present
+Processed parquets exist,PASS,8/8 parquets present
+mortality_master_clean shape (90×≥4),PASS,"shape=(90, 4), nulls=0"
+Features parquet shape,PASS,"shape=(90, 14)"
+"Forecast parquet (3 diseases, 2020–2030)",PASS,"diseases=3, years=2020–2030, rows=33"
+Result CSVs present,PASS,9/9 result CSVs
+Model evaluation metrics (3 rows),PASS,"rows=3, cols=['disease', 'apc_pct', 'loglinear_rmse', 'loglinear_r2', 'linear_rmse', 'linear_r2', 'holt_rmse', 'best_model', 'best_rmse']"
+"Dashboard HTML (>10KB, Chart.js, disease data)",PASS,"size=21.5KB, chart.js=True, disease labels present"
+Agent handoff JSONs (all 7 phases),PASS,7/7 handoff dirs present
+Zero nulls in mortality master,PASS,total nulls in master=0

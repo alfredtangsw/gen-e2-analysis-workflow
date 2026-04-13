@@ -1,0 +1,4 @@
+disease,apc_pct,loglinear_rmse,loglinear_r2,linear_rmse,linear_r2,holt_rmse,best_model,best_rmse
+cancer,-0.959,1.45,0.9915,1.59,0.9898,1.93,log_linear,1.45
+ischaemic_heart_disease,-5.781,19.64,0.9341,3.24,0.9974,2.15,holt_ets,2.15
+stroke,-4.464,5.54,0.9696,1.4,0.9977,1.62,linear,1.4

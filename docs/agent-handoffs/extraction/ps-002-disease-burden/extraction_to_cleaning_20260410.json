@@ -1,0 +1,39 @@
+{
+  "agent": "data-extractor",
+  "problem_statement": "ps-002-disease-burden-temporal-trends",
+  "timestamp": "2026-04-10",
+  "status": "success",
+  "datasets_extracted": [
+    {
+      "file": "age-standardised-mortality-rate-for-cancer.csv",
+      "records": 90
+    },
+    {
+      "file": "age-standardised-mortality-rate-for-stroke.csv",
+      "records": 90
+    },
+    {
+      "file": "age-standardised-mortality-rate-for-ischaemic-heart-disease.csv",
+      "records": 90
+    },
+    {
+      "file": "hospital-admission-rate-by-age-and-sex.csv",
+      "records": 600
+    },
+    {
+      "file": "vaccination-and-immunisation-of-students-annual.csv",
+      "records": 240
+    }
+  ],
+  "raw_data_dir": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/mortality",
+  "schema_file": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/schemas/mortality_raw_schema.yml",
+  "next_agent": "data-cleaning",
+  "files_created": [
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/mortality/age-standardised-mortality-rate-for-cancer.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/mortality/age-standardised-mortality-rate-for-stroke.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/mortality/age-standardised-mortality-rate-for-ischaemic-heart-disease.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/mortality/hospital-admission-rate-by-age-and-sex.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/mortality/vaccination-and-immunisation-of-students-annual.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/schemas/mortality_raw_schema.yml"
+  ]
+}

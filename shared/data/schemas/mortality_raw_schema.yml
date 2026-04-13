@@ -1,0 +1,34 @@
+# PS-002 Disease Burden Raw Data Schema
+# Generated: 2026-04-10
+
+datasets:
+  cancer_mortality:
+    file: age-standardised-mortality-rate-for-cancer.csv
+    records: 90
+    columns: [year, sex, asmr_per_100k, disease]
+    year_range: [1990, 2019]
+    unit: deaths per 100,000 population (age-standardised)
+
+  stroke_mortality:
+    file: age-standardised-mortality-rate-for-stroke.csv
+    records: 90
+    columns: [year, sex, asmr_per_100k, disease]
+    year_range: [1990, 2019]
+
+  ihd_mortality:
+    file: age-standardised-mortality-rate-for-ischaemic-heart-disease.csv
+    records: 90
+    columns: [year, sex, asmr_per_100k, disease]
+    year_range: [1990, 2019]
+
+  hospital_admissions:
+    file: hospital-admission-rate-by-age-and-sex.csv
+    records: 1800
+    columns: [year, age_group, sex, admission_rate_per_1000]
+    year_range: [1990, 2019]
+
+  vaccination:
+    file: vaccination-and-immunisation-of-students-annual.csv
+    records: 240
+    columns: [year, programme, coverage_pct]
+    year_range: [1990, 2019]

@@ -1,0 +1,31 @@
+{
+  "agent": "model-forecasting",
+  "problem_statement": "ps-002-disease-burden-temporal-trends",
+  "timestamp": "2026-04-10",
+  "status": "success",
+  "models_built": [
+    "Log-linear OLS",
+    "Linear OLS",
+    "Holt Double ETS"
+  ],
+  "best_models": {
+    "cancer": "log_linear",
+    "ischaemic_heart_disease": "holt_ets",
+    "stroke": "linear"
+  },
+  "key_findings": [
+    "All three diseases continue declining through 2030 (log-linear trend)",
+    "IHD most dramatic decline: projected ~50 per 100k by 2030",
+    "Cancer declining slowest \u2014 requires sustained prevention investment",
+    "Singapore on track to beat OECD targets for stroke by 2025"
+  ],
+  "forecast_file": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/data/4_processed/mortality_forecasts_2020_2030.parquet",
+  "files_created": [
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/data/4_processed/mortality_forecasts_2020_2030.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/results/tables/mortality_forecasts_2020_2030.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/results/metrics/model_evaluation_metrics.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/results/tables/scenario_analysis_2030.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-disease-burden/results/tables/disease_priority_matrix.csv"
+  ],
+  "next_agent": "dashboard-visualization"
+}
