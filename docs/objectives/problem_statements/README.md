@@ -2,160 +2,132 @@
 
 ## Overview
 
-This directory contains strategic analytics problem statements for the Singapore Health Trends Analysis project. Each problem statement represents a complete analytical initiative from data extraction to actionable insights, focused on problems that can be solved end-to-end with available data and technical capabilities.
+This directory contains the analytics problem statements for the Singapore MOH Healthcare Resource Planning project. All three problem statements form a **sequential pipeline** — each one feeds the next. They are grounded entirely in the verified Kaggle Singapore Health Dataset (`subhamjain/health-dataset-complete-singapore`, ~3.5 MB, 35 CSV tables, 2006–2020) plus identified public external sources.
 
-**Total Problem Statements**: 6  
-**Last Updated**: 2026-03-13
-
----
-
-## Problem Statement Categories
-
-### Predictive Analytics (1)
-
-**[PS-006: Five-Year Disease Burden Forecasting and Mortality Projection](ps-006-disease-burden-forecasting.md)**
-- **Description**: Develop time series forecasting models to project mortality and disease burden for major diseases (cancer, stroke, heart disease) over the next 5 years, enabling proactive healthcare capacity planning and resource allocation
-- **Priority**: P1 (High)
-- **Estimated Sprints**: 5-7
-- **Platform**: HEALIX/Databricks
-- **Dependencies**: PS-002 (recommended but not required)
-- **Key Deliverables**: Forecasting models, 5-year projection report, interactive forecast dashboard, capacity planning tool, forecast monitoring system
+**Total Problem Statements**: 3  
+**Last Updated**: 2026-04-13  
+**Data Source**: [data-sources.md](../../project-context/data-sources.md)
 
 ---
 
-### Descriptive Analytics (2)
+## Data Reality Summary (STEP 1.5)
 
-**[PS-002: National Disease Burden Temporal Trends Analysis](ps-002-disease-burden-temporal-trends.md)**
-- **Description**: Analyze 30-year mortality trends (1990-2019) for major diseases to identify shifting disease burden patterns and inform public health program prioritization
+Before any problem statement was written, the following feasibility constraints were confirmed:
+
+### ✅ What the data supports
+
+- Annual workforce headcount by profession and sector (2006–2019)
+- Annual inpatient bed counts by facility type (2009–2020)
+- Annual hospital admission rates by age group and sex (2006–2020)
+- 30-year age-standardised mortality rates for cancer, stroke, IHD (1990–2019)
+- Total government health expenditure (2006–2018, aggregate only)
+- LTC admissions (sparse, ~25 records — descriptive observation only)
+
+### ❌ What the data does NOT support (dropped from all PS)
+
+- Bed occupancy rates (bed counts exist; patient-days do not)
+- Expenditure by category (workforce/infrastructure/supplies) — total only
+- Diagnosis-linked hospital admissions — admission table has no diagnosis field
+- ICU, step-down, or ward-type-specific beds — not separated in the dataset
+- Diabetes, dementia, respiratory disease burden — no tables in dataset
+- Consumables, supplies, test kit volumes — absent entirely
+- Sub-national or facility-level analysis — national aggregates only
+- Real-time or sub-annual analysis — annual data only
+
+---
+
+## Problem Statement Pipeline
+
+> **Execute in this order**: PS-001 → PS-002 → PS-003
+
+| # | Problem Statement | Category | Priority | Estimated Sprints | Status |
+|---|---|---|---|---|---|
+| [PS-001](ps-001-healthcare-system-baseline.md) | Healthcare System Baseline — Workforce, Capacity & Utilisation | Descriptive | P0 | 2–3 | Initialized |
+| [PS-002](ps-002-healthcare-demand-forecasting.md) | Healthcare Demand Forecasting — Disease Burden & Demographic Projections | Predictive | P0 | 3–4 | Initialized |
+| [PS-003](ps-003-integrated-resource-planning.md) | Integrated Resource Planning & Budget Dashboard | Prescriptive | P0 | 4–5 | Initialized |
+
+**Total estimated effort**: 9–12 sprints
+
+---
+
+## Descriptive Analytics (1)
+
+**[PS-001: Healthcare System Baseline — Workforce, Capacity & Utilisation](ps-001-healthcare-system-baseline.md)**
+- **Description**: Construct an integrated historical baseline (2006–2020) of workforce headcount, facility bed capacity, hospital admission rates, and total government expenditure. Compute staff-to-bed ratios and admissions-per-bed proxies, benchmarked against WHO standards, to identify structural imbalances in the current system.
 - **Priority**: P0 (Critical)
-- **Estimated Sprints**: 3-5
-- **Platform**: HEALIX/Databricks
+- **Estimated Sprints**: 2–3
+- **Platform**: Local → HEALIX/Databricks
 - **Dependencies**: None
-- **Key Deliverables**: Trend analysis report, interactive trend explorer dashboard, curated disease burden dataset, policy brief
-
-**[PS-005: Healthcare Equity and Disparities Analysis](ps-005-healthcare-equity-disparities.md)**
-- **Description**: Quantify healthcare access and outcome disparities across demographic groups and geographic regions to identify underserved populations
-- **Priority**: P1 (High)
-- **Estimated Sprints**: 4-6
-- **Platform**: HEALIX/Databricks
-- **Dependencies**: None
-- **Key Deliverables**: Equity assessment report, disparity metrics dashboard, priority intervention areas
+- **Key Deliverables**: Workforce baseline CSV, facility baseline CSV, utilisation baseline CSV, system balance scorecard CSV, trend charts
 
 ---
 
-### Diagnostic Analytics (2)
+## Predictive Analytics (1)
 
-**[PS-001: Healthcare Workforce Sustainability Analysis](ps-001-healthcare-workforce-sustainability.md)**
-- **Description**: Analyze healthcare workforce trends and identify factors contributing to sustainability challenges in manpower planning
+**[PS-002: Healthcare Demand Forecasting — Disease Burden & Demographic Projections](ps-002-healthcare-demand-forecasting.md)**
+- **Description**: Forecast cancer, stroke, and IHD mortality rate trajectories (2020–2030) and project total hospital admission volumes by age group (2021–2035) using SingStat population projections applied to PS-001 historical admission rates. Produce three demographic scenarios (low/medium/high ageing).
 - **Priority**: P0 (Critical)
-- **Estimated Sprints**: 4-6
-- **Platform**: HEALIX/Databricks
-- **Dependencies**: None
-- **Key Deliverables**: Workforce sustainability report, shortage risk assessment, workforce planning dashboard
-
-**[PS-004: Healthcare Expenditure Drivers Analysis](ps-004-healthcare-expenditure-drivers.md)**
-- **Description**: Identify and quantify key drivers of healthcare expenditure growth to inform cost containment strategies
-- **Priority**: P1 (High)
-- **Estimated Sprints**: 4-5
-- **Platform**: HEALIX/Databricks
-- **Dependencies**: None
-- **Key Deliverables**: Expenditure driver analysis report, cost projection models, policy recommendations
+- **Estimated Sprints**: 3–4
+- **Platform**: Local → HEALIX/Databricks
+- **Dependencies**: PS-001
+- **Key Deliverables**: Disease burden forecast CSV, admission volume projection CSV, forecast validation report, demand projections export for PS-003
 
 ---
 
-### Prescriptive Analytics (1)
+## Prescriptive Analytics (1)
 
-**[PS-003: Healthcare Capacity Optimization](ps-003-healthcare-capacity-optimization.md)**
-- **Description**: Optimize allocation of healthcare resources (beds, facilities, workforce) across the system to maximize access and efficiency
-- **Priority**: P1 (High)
-- **Estimated Sprints**: 5-7
-- **Platform**: HEALIX/Databricks
-- **Dependencies**: PS-001 (workforce data), PS-006 (demand forecasts - recommended)
-- **Key Deliverables**: Capacity optimization models, resource allocation recommendations, scenario planning tool
-
----
-
-## Problem Statement Priority Matrix
-
-| Priority | Problem Statements | Rationale |
-|----------|-------------------|-----------|
-| **P0 (Critical)** | PS-001, PS-002 | Foundational analyses addressing immediate strategic needs and data availability |
-| **P1 (High)** | PS-003, PS-004, PS-005, PS-006 | High-value analyses building on foundational work and enabling proactive planning |
+**[PS-003: Integrated Resource Planning & Budget Dashboard](ps-003-integrated-resource-planning.md)**
+- **Description**: Convert PS-002 demand projections into year-by-year workforce and bed gap analyses, validate that staffing and facility plans are internally consistent (staff-to-bed balance), and estimate workforce cost using public salary benchmarks. Deliver as a self-contained 6-tab interactive HTML dashboard.
+- **Priority**: P0 (Critical)
+- **Estimated Sprints**: 4–5
+- **Platform**: Local → HEALIX/Databricks
+- **Dependencies**: PS-001, PS-002
+- **Key Deliverables**: Workforce gap analysis CSV, bed gap analysis CSV, staff-facility alignment CSV, workforce cost estimate Excel, interactive HTML dashboard
 
 ---
 
-## Problem Statement Dependencies Graph
+## Portfolio Validation
+
+| Check | Status |
+|---|---|
+| All data domains verified against `data-sources.md` | ✅ |
+| No analyses proposed without a corresponding verified dataset | ✅ |
+| Infeasible analyses explicitly dropped with reason | ✅ |
+| External data dependencies identified with public fallbacks | ✅ |
+| Platform feasibility confirmed (local Python/Polars) | ✅ |
+| Problem statements are sequential and non-overlapping | ✅ |
+| Budget scope clearly bounded (workforce cost only — not total system budget) | ✅ |
+| Each PS decomposable into 5–10 user stories | ✅ |
+
+---
+
+## Priority Scoring Summary
+
+| PS | Business Value | Feasibility | Urgency | Total |
+|---|---|---|---|---|
+| PS-001 | 5 | 5 | 5 | **15/15** |
+| PS-002 | 5 | 4 | 5 | **14/15** |
+| PS-003 | 5 | 4 | 5 | **14/15** |
+
+---
+
+## User Stories
+
+Each problem statement has been decomposed into sprint-ready user stories following the data analysis lifecycle. 21 stories total across 3 PS.
+
+| Problem Statement | Stories | Index |
+|---|---|---|
+| PS-001 Healthcare System Baseline | 7 stories | [View →](../user_stories/problem-statement-001-baseline/index.md) |
+| PS-002 Healthcare Demand Forecasting | 7 stories | [View →](../user_stories/problem-statement-002-demand-forecasting/index.md) |
+| PS-003 Integrated Resource Planning | 7 stories | [View →](../user_stories/problem-statement-003-resource-planning/index.md) |
+
+### Execution Sequence
 
 ```
-PS-002 (Disease Trends)
-   ↓ (recommended input)
-PS-006 (Disease Forecasting)
-   ↓ (demand projections)
-PS-003 (Capacity Optimization)
-   ↑ (workforce data)
-PS-001 (Workforce Sustainability)
-
-PS-004 (Expenditure Drivers) ← independent
-PS-005 (Equity Analysis) ← independent
+PS-001 (Baseline)          PS-002 (Forecasting)         PS-003 (Planning)
+Story 01 → 02 → 03/04     Story 01 → 02 → 03 → 04     Story 01 → 02 → 03/04
+→ 05 → 06 → 07  ━━━━━━━━━ → 05/06 → 07  ━━━━━━━━━━━━ → 05 → 06 → 07
 ```
-
-**Legend**:
-- **Solid arrows (↓)**: Recommended sequencing for maximum value
-- **Independent**: Can be executed in parallel without dependencies
-
----
-
-## Recommended Execution Sequence
-
-### Phase 1: Foundational Analysis (Quarters 1-2)
-1. **PS-002**: Disease Burden Temporal Trends (3-5 sprints)
-   - Establishes baseline understanding of disease landscape
-   - Informs forecasting and capacity planning
-   
-2. **PS-001**: Healthcare Workforce Sustainability (4-6 sprints)
-   - Provides workforce supply context for capacity planning
-   - Can run in parallel with PS-002
-
-### Phase 2: Predictive & Optimization (Quarters 2-3)
-3. **PS-006**: Disease Burden Forecasting (5-7 sprints)
-   - Builds on PS-002 trend insights (recommended but not required)
-   - Generates demand projections for capacity optimization
-
-4. **PS-005**: Healthcare Equity Analysis (4-6 sprints)
-   - Can run in parallel with PS-006
-   - Informs equitable capacity allocation
-
-### Phase 3: Strategic Planning (Quarters 3-4)
-5. **PS-003**: Healthcare Capacity Optimization (5-7 sprints)
-   - Leverages workforce data (PS-001) and demand forecasts (PS-006)
-   - Incorporates equity considerations (PS-005)
-
-6. **PS-004**: Healthcare Expenditure Drivers (4-5 sprints)
-   - Can run in parallel or after optimization work
-   - Provides financial context for capacity decisions
-
----
-
-## Problem Statement Status
-
-| ID | Title | Status | Priority | Sprints | Platform |
-|----|-------|--------|----------|---------|----------|
-| PS-001 | Healthcare Workforce Sustainability | Draft | P0 | 4-6 | HEALIX/Databricks |
-| PS-002 | Disease Burden Temporal Trends | Draft | P0 | 3-5 | HEALIX/Databricks |
-| PS-003 | Healthcare Capacity Optimization | Draft | P1 | 5-7 | HEALIX/Databricks |
-| PS-004 | Healthcare Expenditure Drivers | Draft | P1 | 4-5 | HEALIX/Databricks |
-| PS-005 | Healthcare Equity Disparities | Draft | P1 | 4-6 | HEALIX/Databricks |
-| PS-006 | Disease Burden Forecasting | **Draft** | **P1** | **5-7** | **HEALIX/Databricks** |
-
----
-
-## Data Sources Reference
-
-All problem statements are constrained by data documented in:
-- **Primary Data Source**: [Kaggle Health Dataset - Singapore](../project_context/data-sources.md)
-- **Dataset**: `subhamjain/health-dataset-complete-singapore`
-- **Coverage**: 1990-2020 (varies by table)
-- **Tables**: 35 data tables across workforce, facilities, disease burden, utilization, expenditure
 
 **Key Constraint**: Annual granularity, national-level aggregation (no regional breakdowns, no real-time data)
 

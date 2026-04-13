@@ -48,7 +48,16 @@ Welcome to the Gen-E2 documentation. This page serves as the central navigation 
 📁 **Location**: `docs/objectives/problem_statements/`
 
 Current problem statements:
-- *To be added as problems are defined through stakeholder workshops*
+
+> These three problem statements form a sequential pipeline — each feeds the next. All analyses are constrained to the verified Kaggle Singapore Health Dataset (2006–2020) plus identified public external sources (SingStat, WHO GHO, MOM wages). See [PS README](objectives/problem_statements/README.md) for the full data feasibility assessment.
+
+| # | Problem Statement | Priority | Status | Key Output |
+|---|---|---|---|---|
+| [PS-001](objectives/problem_statements/ps-001-healthcare-system-baseline.md) | Healthcare System Baseline — Workforce, Capacity & Utilisation | P0 | Initialized | Workforce baseline, facility baseline, admission rate baseline, system balance scorecard (staff-to-bed ratios vs WHO benchmarks) |
+| [PS-002](objectives/problem_statements/ps-002-healthcare-demand-forecasting.md) | Healthcare Demand Forecasting — Disease Burden & Demographic Projections | P0 | Initialized | Cancer/stroke/IHD mortality forecasts (2020–2030); hospital admission volume projections by age group (2021–2035, 3 demographic scenarios) |
+| [PS-003](objectives/problem_statements/ps-003-integrated-resource-planning.md) | Integrated Resource Planning & Budget Dashboard | P0 | Initialized | Workforce gap + annual hiring targets, bed gap + commissioning milestones, staff-facility alignment validation, workforce cost estimate, 6-tab HTML dashboard |
+
+**Scope boundary**: The dataset supports workforce, beds, and admission-rate analysis at national aggregate, annual granularity. Occupancy rates, diagnosis-linked admissions, ICU/step-down splits, consumables, and expenditure by category are absent from the data and are excluded from all analyses.
 
 **User Stories**
 

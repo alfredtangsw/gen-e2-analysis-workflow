@@ -1,8 +1,9 @@
 # Healthcare Workforce Planning: Metrics & KPIs
 
-**Domain**: Healthcare Workforce Planning (PS-001)  
-**Purpose**: Reference guide for workforce analytics, forecasting, and capacity planning  
-**Last Updated**: March 11, 2026
+**Domain**: Healthcare Workforce Planning  
+**Purpose**: Reference guide for workforce analytics, capacity ratios, and planning benchmarks  
+**Related Problem Statements**: PS-001 (Baseline), PS-003 (Resource Planning)  
+**Last Updated**: 2026-04-13
 
 ---
 

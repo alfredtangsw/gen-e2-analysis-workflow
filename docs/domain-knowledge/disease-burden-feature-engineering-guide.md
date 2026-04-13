@@ -1,8 +1,9 @@
 # Disease Burden & Mortality Trends: Feature Engineering Guide
 
-**Domain**: Disease Burden Analysis & Epidemiological Metrics (PS-002)  
+**Domain**: Disease Burden Analysis & Epidemiological Metrics  
 **Purpose**: Reference guide for mortality trend analysis, disease burden calculation, and epidemiological feature engineering  
-**Last Updated**: March 11, 2026
+**Related Problem Statements**: PS-002 (Demand Forecasting)  
+**Last Updated**: 2026-04-13
 
 ---
 

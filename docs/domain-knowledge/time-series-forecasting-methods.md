@@ -12,8 +12,8 @@ Time series forecasting for disease burden enables proactive healthcare capacity
 
 ## Related Problem Statements
 
-- [PS-006: Five-Year Disease Burden Forecasting and Mortality Projection](../objectives/problem_statements/ps-006-disease-burden-forecasting.md)
-- [PS-002: National Disease Burden Temporal Trends Analysis](../objectives/problem_statements/ps-002-disease-burden-temporal-trends.md)
+- [PS-002: Healthcare Demand Forecasting — Disease Burden & Demographic Projections](../objectives/problem_statements/ps-002-healthcare-demand-forecasting.md)
+- [PS-003: Integrated Resource Planning & Budget Dashboard](../objectives/problem_statements/ps-003-integrated-resource-planning.md)
 
 ## Related Stakeholders
 

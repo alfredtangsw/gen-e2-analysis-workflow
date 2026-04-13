@@ -216,4 +216,22 @@ __marimo__/
 .user-stories/
 problem-statement/
 .shared/
-shared/
+
+# Raw data (large files — never commit)
+shared/data/1_raw/**
+shared/data/2_external/**
+!shared/data/1_raw/.gitkeep
+!shared/data/2_external/.gitkeep
+
+# Trained model artifacts
+*.pkl
+*.joblib
+*.model
+
+# Data files (intermediate/processed outputs)
+*.parquet
+*.feather
+
+# Kaggle credentials
+kaggle.json
+.kaggle/
