@@ -1,0 +1,46 @@
+{
+  "agent": "data-extractor",
+  "problem_statement": "ps-003-integrated-resource-planning",
+  "status": "success",
+  "timestamp": "2026-04-14T06:07:42.466607+00:00",
+  "outputs": [
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/logs/etl/ps003_input_reconciliation.csv",
+      "type": "csv",
+      "description": "Input reconciliation report"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/results/tables/ps003_planning_constants.csv",
+      "type": "csv",
+      "description": "Planning constants"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/notebooks/01_data_extraction.ipynb",
+      "type": "notebook"
+    }
+  ],
+  "inputs_loaded": 9,
+  "failed_inputs": [],
+  "planning_constants": {
+    "alos_days": 5.1,
+    "target_occupancy_rate": 0.85,
+    "nurse_bed_ratio_benchmark": 0.25,
+    "doctors_per_10k_benchmark": 2.3,
+    "nurses_per_10k_benchmark": 22.8,
+    "rn_median_wage_sgd_monthly": 4200,
+    "gp_median_wage_sgd_monthly": 8500,
+    "pharmacist_wage_sgd_monthly": 4500,
+    "allied_health_wage_sgd_monthly": 3800,
+    "nurse_attrition_pct": 8.0,
+    "doctor_attrition_pct": 3.0,
+    "pharmacist_attrition_pct": 5.0,
+    "allied_health_attrition_pct": 6.0,
+    "overhead_multiplier": 1.35,
+    "forecast_start_year": 2021,
+    "forecast_end_year": 2035
+  },
+  "ps001_processed_dir": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/4_processed",
+  "ps002_results_dir": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/results/tables",
+  "gate": "PASSED",
+  "next_agent": "data-validation"
+}

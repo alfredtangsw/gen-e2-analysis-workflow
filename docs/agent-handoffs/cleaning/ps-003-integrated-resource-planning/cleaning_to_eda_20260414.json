@@ -1,0 +1,30 @@
+{
+  "agent": "data-cleaning",
+  "problem_statement": "ps-003-integrated-resource-planning",
+  "status": "success",
+  "timestamp": "2026-04-14T06:09:06.397251+00:00",
+  "outputs": [
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/results/tables/ps003_cleaning_log.csv",
+      "type": "csv"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/data/3_interim/ps003_workforce_supply_base.parquet",
+      "type": "parquet"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/data/3_interim/ps003_beds_base.parquet",
+      "type": "parquet"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/data/3_interim/ps003_population_base.parquet",
+      "type": "parquet"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/data/3_interim/ps003_admissions_forecast_2021_2035.parquet",
+      "type": "parquet"
+    }
+  ],
+  "interim_dir": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/data/3_interim",
+  "next_agent": "exploratory-analysis"
+}

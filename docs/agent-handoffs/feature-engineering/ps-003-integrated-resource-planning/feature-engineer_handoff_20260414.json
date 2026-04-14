@@ -1,0 +1,49 @@
+{
+  "agent": "feature-engineer",
+  "problem_statement": "ps-003-integrated-resource-planning",
+  "status": "success",
+  "timestamp": "2026-04-14T06:10:56.450958+00:00",
+  "outputs": [
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/data/4_processed/ps003_workforce_supply_projection.parquet",
+      "type": "parquet"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/data/4_processed/ps003_workforce_demand_projection.parquet",
+      "type": "parquet"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/data/4_processed/ps003_workforce_gap.parquet",
+      "type": "parquet"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/data/4_processed/ps003_bed_gap.parquet",
+      "type": "parquet"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/data/4_processed/ps003_staff_facility_alignment.parquet",
+      "type": "parquet"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/results/tables/ps003_eda_summary.csv",
+      "type": "csv"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/notebooks/03_eda_features.ipynb",
+      "type": "notebook"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/reports/figures/ps003_gap_analysis.png",
+      "type": "png"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/reports/figures/ps003_nurse_bed_alignment.png",
+      "type": "png"
+    }
+  ],
+  "next_agent": "model-forecasting",
+  "key_findings": [
+    "Nurse demand 2035: [4365]",
+    "Diverged alignment years: [2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035]"
+  ]
+}

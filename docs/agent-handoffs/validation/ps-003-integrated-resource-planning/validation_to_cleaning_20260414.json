@@ -1,0 +1,19 @@
+{
+  "agent": "data-validation",
+  "problem_statement": "ps-003-integrated-resource-planning",
+  "status": "success",
+  "timestamp": "2026-04-14T06:09:06.397251+00:00",
+  "outputs": [
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/results/tables/ps003_validation_report.csv",
+      "type": "csv"
+    }
+  ],
+  "validation_summary": {
+    "total": 17,
+    "pass": 17,
+    "warn": 0,
+    "fail": 0,
+    "gate": "PASSED"
+  }
+}

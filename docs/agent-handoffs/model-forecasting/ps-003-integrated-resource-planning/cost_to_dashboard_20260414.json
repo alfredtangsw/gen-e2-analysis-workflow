@@ -1,0 +1,39 @@
+{
+  "agent": "model-forecasting",
+  "problem_statement": "ps-003-integrated-resource-planning",
+  "status": "success",
+  "timestamp": "2026-04-14T06:12:36.510877+00:00",
+  "outputs": [
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/results/metrics/ps003_workforce_cost.csv",
+      "type": "csv"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/results/metrics/ps003_annual_cost_summary.csv",
+      "type": "csv"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/results/metrics/ps003_cost_snapshots.csv",
+      "type": "csv"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/results/metrics/ps003_hiring_targets.csv",
+      "type": "csv"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/results/exports/ps003_workforce_cost_2021_2035.csv",
+      "type": "csv"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/notebooks/04_cost_estimation.ipynb",
+      "type": "notebook"
+    }
+  ],
+  "key_metrics": {
+    "total_workforce_2035": 405631,
+    "total_cost_2035_sgd_m": 31614.989999999998,
+    "attrition_hires_2021": 14794.0
+  },
+  "note": "Workforce cost = supply headcount \u00d7 annual salary \u00d7 overhead. Costs labelled as WORKFORCE COST ESTIMATE \u2014 not total healthcare budget.",
+  "next_agent": "dashboard-visualization"
+}

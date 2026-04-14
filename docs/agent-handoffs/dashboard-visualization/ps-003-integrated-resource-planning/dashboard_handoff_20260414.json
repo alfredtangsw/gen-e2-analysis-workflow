@@ -1,0 +1,22 @@
+{
+  "agent": "dashboard-visualization",
+  "problem_statement": "ps-003-integrated-resource-planning",
+  "status": "success",
+  "timestamp": "2026-04-14T06:14:20.031860+00:00",
+  "outputs": [
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-003-integrated-resource-planning/reports/dashboards/ps003_integrated_resource_planning_dashboard.html",
+      "type": "html",
+      "size_kb": 18,
+      "description": "6-tab interactive resource planning dashboard"
+    }
+  ],
+  "tabs": [
+    "Executive Overview",
+    "Workforce Supply/Demand",
+    "Bed Capacity",
+    "Staff-Facility Alignment",
+    "Workforce Cost",
+    "Hiring Targets"
+  ]
+}
