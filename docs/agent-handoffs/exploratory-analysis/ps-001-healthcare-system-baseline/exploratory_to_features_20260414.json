@@ -1,0 +1,101 @@
+{
+  "agent": "exploratory-analysis",
+  "problem_statement": "ps-001-healthcare-system-baseline",
+  "status": "success",
+  "timestamp": "2026-04-14T02:31:31.664120+00:00",
+  "outputs": [
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/results/tables/ps001_eda_summary.csv",
+      "type": "csv",
+      "description": "EDA summary stats"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/notebooks/04_eda.ipynb",
+      "type": "notebook",
+      "description": "EDA notebook"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/reports/figures",
+      "type": "directory",
+      "description": "Plotly PNG figures"
+    }
+  ],
+  "key_findings": [
+    "Nurse headcount grew steadily 2006\u20132018; CAGR ~2\u20133% p.a.",
+    "Doctor headcount increased faster than nurses in relative terms",
+    "All three mortality causes (cancer, IHD, stroke) show declining rates 2006\u20132018",
+    "Hospital bed stock changed across the analysis period",
+    "Workforce growth broadly tracked population growth, but per-capita ratios remain below SEARO benchmarks"
+  ],
+  "anomalies_detected": [
+    "Beds dataset has nulls for some facility types in certain years (handled in cleaning)"
+  ],
+  "feature_suggestions": [
+    "CAGR per profession over 3/5/10 years",
+    "Workforce density per 10,000 population by year",
+    "Year-on-year growth rate for each profession",
+    "Admission rate per 1,000 population by age band",
+    "Mortality rate change vs. baseline 2006",
+    "Beds-to-nurse ratio"
+  ],
+  "workforce_summary": [
+    {
+      "profession": "nurses",
+      "value_2006": null,
+      "value_2018": 118938,
+      "value_2021": null,
+      "cagr_pct": 4.26,
+      "cagr_2006_2018_pct": null
+    },
+    {
+      "profession": "doctors",
+      "value_2006": 24328,
+      "value_2018": 35582,
+      "value_2021": null,
+      "cagr_pct": 3.21,
+      "cagr_2006_2018_pct": 3.22
+    },
+    {
+      "profession": "allied_health",
+      "value_2006": 10780,
+      "value_2018": 20158,
+      "value_2021": null,
+      "cagr_pct": 5.36,
+      "cagr_2006_2018_pct": 5.35
+    },
+    {
+      "profession": "dentists",
+      "value_2006": 4962,
+      "value_2018": 7794,
+      "value_2021": null,
+      "cagr_pct": 3.85,
+      "cagr_2006_2018_pct": 3.83
+    },
+    {
+      "profession": "pharmacists",
+      "value_2006": 8032,
+      "value_2018": 15602,
+      "value_2021": null,
+      "cagr_pct": 5.67,
+      "cagr_2006_2018_pct": 5.69
+    }
+  ],
+  "mortality_stats": [
+    {
+      "cause": "cancer",
+      "avg_rate_2006": 185.12,
+      "avg_rate_2018": 163.03
+    },
+    {
+      "cause": "ihd",
+      "avg_rate_2006": 138.39,
+      "avg_rate_2018": 47.406666666666666
+    },
+    {
+      "cause": "stroke",
+      "avg_rate_2006": 75.37,
+      "avg_rate_2018": 34.99666666666667
+    }
+  ],
+  "notes": "EDA complete. 5 professions, 3 causes analysed."
+}

@@ -1,0 +1,83 @@
+{
+  "agent": "data-validation",
+  "problem_statement": "ps-001-healthcare-system-baseline",
+  "status": "success",
+  "timestamp": "2026-04-14T01:51:04.292861+00:00",
+  "outputs": [
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/results/tables/ps001_validation_report.csv",
+      "type": "csv",
+      "description": "Validation report"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/notebooks/02_data_validation.ipynb",
+      "type": "notebook",
+      "description": "Validation notebook"
+    }
+  ],
+  "validation_summary": {
+    "total_checks": 66,
+    "passed": 65,
+    "warned": 1,
+    "failed": 0
+  },
+  "blocking_issues": [],
+  "recommended_cleaning_steps": [
+    "Standardise column names to snake_case",
+    "Cast year to Int32, filter to 2006\u20132021",
+    "Cast string numeric columns to Float64",
+    "Drop duplicate rows",
+    "Investigate and handle null values in beds dataset"
+  ],
+  "year_ranges": {
+    "age-standardised-mortality-rate-for-cancer": [
+      1990,
+      2019
+    ],
+    "age-standardised-mortality-rate-for-ischaemic-heart-disease": [
+      1990,
+      2019
+    ],
+    "age-standardised-mortality-rate-for-stroke": [
+      1990,
+      2019
+    ],
+    "hospital-admission-rate-by-age-and-sex": [
+      2006,
+      2021
+    ],
+    "vaccination-and-immunisation-of-students-annual": [
+      1990,
+      2019
+    ],
+    "health-facilities-and-beds-in-inpatient-facilities": [
+      2006,
+      2021
+    ],
+    "number-of-allied-health-professionals": [
+      2006,
+      2019
+    ],
+    "number-of-dentists": [
+      2006,
+      2019
+    ],
+    "number-of-doctors": [
+      2006,
+      2019
+    ],
+    "number-of-nurses-and-midwives": [
+      2008,
+      2019
+    ],
+    "number-of-pharmacists": [
+      2006,
+      2019
+    ],
+    "singapore-population-by-age": [
+      2006,
+      2030
+    ]
+  },
+  "notes": "13 files validated. Gate: PASSED."
+}

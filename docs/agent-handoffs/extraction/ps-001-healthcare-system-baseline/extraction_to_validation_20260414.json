@@ -1,0 +1,54 @@
+{
+  "agent": "data-extractor",
+  "problem_statement": "ps-001-healthcare-system-baseline",
+  "status": "success",
+  "timestamp": "2026-04-14T01:14:05.722589+00:00",
+  "outputs": [
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/results/tables/ps001_data_profile.csv",
+      "type": "csv",
+      "description": "Column-level profile of all source datasets"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/notebooks/01_data_extraction.ipynb",
+      "type": "notebook",
+      "description": "Extraction and profiling notebook"
+    }
+  ],
+  "source_files": [
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/workforce/health-facilities-and-beds-in-inpatient-facilities.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/workforce/hospital-admission-rate-by-age-and-sex.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/workforce/number-of-allied-health-professionals.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/workforce/number-of-dentists.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/workforce/number-of-doctors.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/workforce/number-of-nurses-and-midwives.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/workforce/number-of-pharmacists.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/workforce/singapore-population-by-age.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/mortality/age-standardised-mortality-rate-for-cancer.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/mortality/age-standardised-mortality-rate-for-ischaemic-heart-disease.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/mortality/age-standardised-mortality-rate-for-stroke.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/mortality/hospital-admission-rate-by-age-and-sex.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/mortality/vaccination-and-immunisation-of-students-annual.csv"
+  ],
+  "extraction_summary": {
+    "total_files": 13,
+    "total_rows": 2558,
+    "workforce_files": 8,
+    "mortality_files": 5,
+    "date_range": {
+      "start": "1990",
+      "end": "2030"
+    }
+  },
+  "validation_results": {
+    "overall_status": "PASSED",
+    "quality_flags": [],
+    "blocking_issues": []
+  },
+  "recommended_cleaning_steps": [
+    "Standardise year column names across all tables",
+    "Verify population age-band alignment between workforce and population datasets",
+    "Cast numeric columns from String where inferred incorrectly"
+  ],
+  "notes": "13 datasets profiled. Profile CSV: /Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/results/tables/ps001_data_profile.csv."
+}

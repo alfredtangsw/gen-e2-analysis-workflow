@@ -1,0 +1,106 @@
+{
+  "agent": "data-cleaning",
+  "problem_statement": "ps-001-healthcare-system-baseline",
+  "status": "success",
+  "timestamp": "2026-04-14T01:53:08.205466+00:00",
+  "outputs": [
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/results/tables/ps001_cleaning_log.csv",
+      "type": "csv",
+      "description": "Cleaning log"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/notebooks/03_data_cleaning.ipynb",
+      "type": "notebook",
+      "description": "Cleaning notebook"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/workforce_health-facilities-and-beds-in-inpatient-facilities_clean.parquet",
+      "type": "parquet",
+      "description": "Cleaned dataset: health-facilities-and-beds-in-inpatient-facilities"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/workforce_hospital-admission-rate-by-age-and-sex_clean.parquet",
+      "type": "parquet",
+      "description": "Cleaned dataset: hospital-admission-rate-by-age-and-sex"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/workforce_number-of-allied-health-professionals_clean.parquet",
+      "type": "parquet",
+      "description": "Cleaned dataset: number-of-allied-health-professionals"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/workforce_number-of-dentists_clean.parquet",
+      "type": "parquet",
+      "description": "Cleaned dataset: number-of-dentists"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/workforce_number-of-doctors_clean.parquet",
+      "type": "parquet",
+      "description": "Cleaned dataset: number-of-doctors"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/workforce_number-of-nurses-and-midwives_clean.parquet",
+      "type": "parquet",
+      "description": "Cleaned dataset: number-of-nurses-and-midwives"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/workforce_number-of-pharmacists_clean.parquet",
+      "type": "parquet",
+      "description": "Cleaned dataset: number-of-pharmacists"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/workforce_singapore-population-by-age_clean.parquet",
+      "type": "parquet",
+      "description": "Cleaned dataset: singapore-population-by-age"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/mortality_age-standardised-mortality-rate-for-cancer_clean.parquet",
+      "type": "parquet",
+      "description": "Cleaned dataset: age-standardised-mortality-rate-for-cancer"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/mortality_age-standardised-mortality-rate-for-ischaemic-heart-disease_clean.parquet",
+      "type": "parquet",
+      "description": "Cleaned dataset: age-standardised-mortality-rate-for-ischaemic-heart-disease"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/mortality_age-standardised-mortality-rate-for-stroke_clean.parquet",
+      "type": "parquet",
+      "description": "Cleaned dataset: age-standardised-mortality-rate-for-stroke"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/mortality_hospital-admission-rate-by-age-and-sex_clean.parquet",
+      "type": "parquet",
+      "description": "Cleaned dataset: hospital-admission-rate-by-age-and-sex"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/mortality_vaccination-and-immunisation-of-students-annual_clean.parquet",
+      "type": "parquet",
+      "description": "Cleaned dataset: vaccination-and-immunisation-of-students-annual"
+    }
+  ],
+  "cleaned_parquets": [
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/workforce_health-facilities-and-beds-in-inpatient-facilities_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/workforce_hospital-admission-rate-by-age-and-sex_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/workforce_number-of-allied-health-professionals_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/workforce_number-of-dentists_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/workforce_number-of-doctors_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/workforce_number-of-nurses-and-midwives_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/workforce_number-of-pharmacists_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/workforce_singapore-population-by-age_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/mortality_age-standardised-mortality-rate-for-cancer_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/mortality_age-standardised-mortality-rate-for-ischaemic-heart-disease_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/mortality_age-standardised-mortality-rate-for-stroke_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/mortality_hospital-admission-rate-by-age-and-sex_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim/mortality_vaccination-and-immunisation-of-students-annual_clean.parquet"
+  ],
+  "cleaning_summary": {
+    "total_tables": 13,
+    "total_rows_before": 2558,
+    "total_rows_after": 1876,
+    "total_rows_dropped": 682,
+    "analysis_window": "2006\u20132021"
+  },
+  "notes": "13 datasets cleaned and written to /Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-001-healthcare-system-baseline/data/3_interim."
+}
