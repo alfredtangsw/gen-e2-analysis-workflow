@@ -1,0 +1,26 @@
+{
+  "agent": "data-validation",
+  "problem_statement": "ps-002-healthcare-demand-forecasting",
+  "status": "success",
+  "timestamp": "2026-04-14T05:51:11.537765+00:00",
+  "outputs": [
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/results/tables/ps002_validation_report.csv",
+      "type": "csv",
+      "description": "Validation report"
+    }
+  ],
+  "validation_summary": {
+    "total_checks": 42,
+    "pass": 42,
+    "warn": 0,
+    "fail": 0,
+    "gate": "PASSED"
+  },
+  "data_decisions": [
+    "Filter analysis window: mortality & admissions 1990\u20132019 (exclude 2020 \u2014 COVID structural break)",
+    "Filter forecasting base: 1990\u20132019 for mortality ASMR, 2006\u20132019 for admissions",
+    "Population data 2006\u20132030 available \u2014 use historical up to 2019, projections as forecast covariate"
+  ],
+  "next_agent": "data-cleaning"
+}

@@ -1,0 +1,90 @@
+{
+  "agent": "data-cleaning",
+  "problem_statement": "ps-002-healthcare-demand-forecasting",
+  "status": "success",
+  "timestamp": "2026-04-14T05:51:48.414672+00:00",
+  "outputs": [
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/results/tables/ps002_cleaning_log.csv",
+      "type": "csv",
+      "description": "Cleaning log"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/data/3_interim",
+      "type": "directory",
+      "description": "Cleaned parquets"
+    }
+  ],
+  "datasets": {
+    "mortality_cancer": {
+      "table": "age-standardised-mortality-rate-for-cancer",
+      "domain": "mortality",
+      "out_stem": "mortality_cancer",
+      "rows_in": 90,
+      "rows_out": 90,
+      "year_filter": "1990-2019",
+      "output": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/data/3_interim/mortality_cancer_clean.parquet"
+    },
+    "mortality_ihd": {
+      "table": "age-standardised-mortality-rate-for-ischaemic-heart-disease",
+      "domain": "mortality",
+      "out_stem": "mortality_ihd",
+      "rows_in": 90,
+      "rows_out": 90,
+      "year_filter": "1990-2019",
+      "output": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/data/3_interim/mortality_ihd_clean.parquet"
+    },
+    "mortality_stroke": {
+      "table": "age-standardised-mortality-rate-for-stroke",
+      "domain": "mortality",
+      "out_stem": "mortality_stroke",
+      "rows_in": 90,
+      "rows_out": 90,
+      "year_filter": "1990-2019",
+      "output": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/data/3_interim/mortality_stroke_clean.parquet"
+    },
+    "admissions_by_age_sex": {
+      "table": "hospital-admission-rate-by-age-and-sex",
+      "domain": "mortality",
+      "out_stem": "admissions_by_age_sex",
+      "rows_in": 600,
+      "rows_out": 600,
+      "year_filter": "1990-2019",
+      "output": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/data/3_interim/admissions_by_age_sex_clean.parquet"
+    },
+    "vaccination": {
+      "table": "vaccination-and-immunisation-of-students-annual",
+      "domain": "mortality",
+      "out_stem": "vaccination",
+      "rows_in": 240,
+      "rows_out": 240,
+      "year_filter": "1990-2019",
+      "output": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/data/3_interim/vaccination_clean.parquet"
+    },
+    "population_by_age": {
+      "table": "singapore-population-by-age",
+      "domain": "population",
+      "out_stem": "population_by_age",
+      "rows_in": 250,
+      "rows_out": 250,
+      "year_filter": "2006-2030",
+      "output": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/data/3_interim/population_by_age_clean.parquet"
+    }
+  },
+  "data_decisions": [
+    "Mortality ASMR filtered to 1990\u20132019 (30-year trend for ARIMA/ETS)",
+    "Hospital admissions filtered to 1990\u20132019",
+    "Population data retained 2006\u20132030 (projections used as forecast covariates)",
+    "COVID-2020 excluded from all training windows (structural break)",
+    "All numeric columns cast to Float64 for model compatibility"
+  ],
+  "parquet_files": [
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/data/3_interim/mortality_cancer_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/data/3_interim/mortality_ihd_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/data/3_interim/mortality_stroke_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/data/3_interim/admissions_by_age_sex_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/data/3_interim/vaccination_clean.parquet",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/data/3_interim/population_by_age_clean.parquet"
+  ],
+  "next_agent": "exploratory-analysis"
+}

@@ -1,0 +1,28 @@
+{
+  "agent": "model-forecasting",
+  "problem_statement": "ps-002-healthcare-demand-forecasting",
+  "status": "success",
+  "timestamp": "2026-04-14T05:55:27.893032+00:00",
+  "model_summary": {
+    "series_modelled": 8,
+    "pass": 8,
+    "warn": 0,
+    "fail": 0,
+    "gate": "PASSED"
+  },
+  "outputs": [
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/results/metrics/ps002_model_metrics.csv",
+      "type": "csv"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/results/tables/ps002_forecasts_2021_2030.csv",
+      "type": "csv"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/notebooks/06_model_forecasting.ipynb",
+      "type": "notebook"
+    }
+  ],
+  "next_agent": "dashboard-visualization"
+}

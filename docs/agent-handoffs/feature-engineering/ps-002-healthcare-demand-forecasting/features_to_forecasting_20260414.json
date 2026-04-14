@@ -1,0 +1,41 @@
+{
+  "agent": "feature-engineer",
+  "problem_statement": "ps-002-healthcare-demand-forecasting",
+  "status": "success",
+  "timestamp": "2026-04-14T05:53:53.469232+00:00",
+  "features_created": [
+    "asmr_per_100k_lag1, lag2, lag3 \u2014 autoregressive features for ARIMA",
+    "asmr_per_100k_roll3, roll5 \u2014 smoothed baseline for trend comparison",
+    "asmr_per_100k_yoy_pct \u2014 velocity feature",
+    "admission_rate_per_1000_lag1..3, roll3, roll5, yoy_pct \u2014 same set for admissions",
+    "cagr_pct \u2014 per disease x sex (used as model diagnostic)"
+  ],
+  "train_test_split": {
+    "train": "1990\u20132014 (25 years)",
+    "test": "2015\u20132019 (5 years)",
+    "forecast_horizon": "2020\u20132030 (exclude 2020 actual due to COVID)"
+  },
+  "outputs": [
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/data/4_processed/mortality_features.parquet",
+      "type": "parquet"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/data/4_processed/admissions_features.parquet",
+      "type": "parquet"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/data/4_processed/population_annual.parquet",
+      "type": "parquet"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/results/tables/ps002_cagr_by_disease_sex.csv",
+      "type": "csv"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/notebooks/05_feature_engineering.ipynb",
+      "type": "notebook"
+    }
+  ],
+  "next_agent": "model-forecasting"
+}

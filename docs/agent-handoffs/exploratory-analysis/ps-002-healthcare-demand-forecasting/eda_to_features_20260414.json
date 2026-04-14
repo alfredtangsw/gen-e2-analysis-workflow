@@ -1,0 +1,41 @@
+{
+  "agent": "exploratory-analysis",
+  "problem_statement": "ps-002-healthcare-demand-forecasting",
+  "status": "success",
+  "timestamp": "2026-04-14T05:52:53.358488+00:00",
+  "key_findings": [
+    "All 3 major diseases showed declining ASMR 1990\u20132019 (health system improvement)",
+    "Cancer ASMR declining faster in males than females",
+    "Hospital admissions highest in elderly (65+) age groups \u2014 key forecasting segment",
+    "Vaccination coverage near 100% across most programmes by 2000",
+    "30-year consistent time series (no gaps) \u2014 suitable for ARIMA/ETS/Prophet"
+  ],
+  "outputs": [
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/results/tables/ps002_eda_summary.csv",
+      "type": "csv"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/notebooks/04_eda.ipynb",
+      "type": "notebook"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/reports/figures/ps002_mortality_trends.png",
+      "type": "png"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/reports/figures/ps002_admissions_by_age.png",
+      "type": "png"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/reports/figures/ps002_vaccination_trends.png",
+      "type": "png"
+    }
+  ],
+  "recommended_models": [
+    "ARIMA \u2014 30-yr annual data, clearly non-stationary (differencing needed)",
+    "Holt-Winters ETS \u2014 good for smooth monotonic trends",
+    "Prophet \u2014 handles trend changepoints automatically"
+  ],
+  "next_agent": "feature-engineer"
+}

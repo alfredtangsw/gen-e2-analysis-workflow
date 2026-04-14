@@ -1,0 +1,28 @@
+{
+  "agent": "dashboard-visualization",
+  "problem_statement": "ps-002-healthcare-demand-forecasting",
+  "status": "success",
+  "timestamp": "2026-04-14T05:59:10.924687+00:00",
+  "outputs": [
+    {
+      "path": "problem-statements/ps-002-healthcare-demand-forecasting/reports/dashboards/ps002_healthcare_demand_forecasting_dashboard.html",
+      "type": "html",
+      "size_kb": 20,
+      "description": "5-tab interactive forecasting dashboard"
+    }
+  ],
+  "tabs": [
+    "Overview KPIs",
+    "Mortality Trends",
+    "Mortality Forecast",
+    "Hospital Admissions",
+    "Model Performance"
+  ],
+  "charts": [
+    "Cancer/IHD/Stroke ASMR trends (1990-2019)",
+    "Cancer/IHD/Stroke ASMR forecasts (2021-2030)",
+    "Hospital admissions by sex historical+forecast",
+    "Admissions by age group",
+    "Model MAPE table"
+  ]
+}

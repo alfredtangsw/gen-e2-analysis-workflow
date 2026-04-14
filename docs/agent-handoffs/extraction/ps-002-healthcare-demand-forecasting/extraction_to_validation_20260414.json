@@ -1,0 +1,55 @@
+{
+  "agent": "data-extractor",
+  "problem_statement": "ps-002-healthcare-demand-forecasting",
+  "status": "success",
+  "timestamp": "2026-04-14T05:50:12.448927+00:00",
+  "outputs": [
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/results/tables/ps002_data_profile.csv",
+      "type": "csv",
+      "description": "Data profile summary"
+    },
+    {
+      "path": "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/problem-statements/ps-002-healthcare-demand-forecasting/notebooks/01_data_extraction.ipynb",
+      "type": "notebook",
+      "description": "Extraction notebook"
+    }
+  ],
+  "source_files": [
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/mortality/age-standardised-mortality-rate-for-cancer.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/mortality/age-standardised-mortality-rate-for-ischaemic-heart-disease.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/mortality/age-standardised-mortality-rate-for-stroke.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/mortality/hospital-admission-rate-by-age-and-sex.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/mortality/vaccination-and-immunisation-of-students-annual.csv",
+    "/Users/alfredtang/Documents/Projects/gen-e2/gen-e2-analysis-workflow/shared/data/1_raw/workforce/singapore-population-by-age.csv"
+  ],
+  "extraction_summary": {
+    "total_files": 6,
+    "total_rows": 1360,
+    "mortality_files": 5,
+    "date_range": {
+      "start": "1990",
+      "end": "2030"
+    }
+  },
+  "validation_results": {
+    "overall_status": "PASSED",
+    "blocking_issues": []
+  },
+  "dataset_descriptions": {
+    "age-standardised-mortality-rate-for-cancer": "Annual age-standardised cancer mortality rates by sex/cause",
+    "age-standardised-mortality-rate-for-ischaemic-heart-disease": "Annual IHD mortality rates",
+    "age-standardised-mortality-rate-for-stroke": "Annual stroke mortality rates",
+    "hospital-admission-rate-by-age-and-sex": "Hospital admission rates by age group and sex",
+    "vaccination-and-immunisation-of-students-annual": "Annual student vaccination rates",
+    "singapore-population-by-age": "Annual Singapore population by 5-year age band"
+  },
+  "recommended_cleaning_steps": [
+    "Standardise column names to snake_case",
+    "Cast year to Int32",
+    "Filter to consistent analysis window (1990\u20132019 for mortality; 2006\u20132019 for admissions)",
+    "Exclude 2020 data due to COVID-19 structural break",
+    "Cast numeric value columns from String where needed"
+  ],
+  "notes": "6 datasets profiled. Gate: PASSED."
+}
